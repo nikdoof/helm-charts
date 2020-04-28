@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "deluge.fullname" . }}-btudp
+  labels:
+    app.kubernetes.io/name: {{ include "deluge.name" . }}
+    helm.sh/chart: {{ include "deluge.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- if .Values.btservice.labels }}
+{{ toYaml .Values.btservice.labels | indent 4 }}
+{{- end }}
+{{- with .Values.btservice.annotations }}
+  annotations:
+{{ toYaml . | indent 4 }}
+{{- end }}
+spec:
+{{- if (or (eq .Values.btservice.type "ClusterIP") (empty .Values.btservice.type)) }}
+  type: ClusterIP
+  {{- if .Values.btservice.clusterIP }}
+  clusterIP: {{ .Values.btservice.clusterIP }}
+  {{end}}
+{{- else if eq .Values.btservice.type "LoadBalancer" }}
+  type: {{ .Values.btservice.type }}
+  {{- if .Values.btservice.loadBalancerIP }}
+  loadBalancerIP: {{ .Values.btservice.loadBalancerIP }}
+  {{- end }}
+  {{- if .Values.btservice.loadBalancerSourceRanges }}
+  loadBalancerSourceRanges:
+{{ toYaml .Values.btservice.loadBalancerSourceRanges | indent 4 }}
+  {{- end -}}
+{{- else }}
+  type: {{ .Values.btservice.type }}
+{{- end }}
+{{- if .Values.btservice.externalIPs }}
+  externalIPs:
+{{ toYaml .Values.btservice.externalIPs | indent 4 }}
+{{- end }}
+  {{- if .Values.btservice.externalTrafficPolicy }}
+  externalTrafficPolicy: {{ .Values.btservice.externalTrafficPolicy }}
+  {{- end }}
+  ports:
+    - name: bt-udp
+      port: 58946
+      protocol: UDP 
+      targetPort: bt-udp
+{{ if (eq .Values.btservice.type "NodePort") }}
+      nodePort: 58946
+{{ end }}
+  selector:
+    app.kubernetes.io/name: {{ include "deluge.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    

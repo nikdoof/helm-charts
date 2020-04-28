@@ -1,0 +1,16 @@
+apiVersion: v1
+appVersion: 2.0.3-2201906121747ubuntu18.04.1-ls57
+description: A Python based monitoring and tracking tool for Plex Media Server.
+name: deluge
+version: 1.0.0
+keywords:
+  - deluge
+  - calibre
+home: https://github.com/nikdoof/home-k8s-flux/tree/master/charts/deluge
+icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/deluge-icon.png
+sources:
+  - https://hub.docker.com/r/linuxserver/deluge/
+  - https://github.com/janeczku/deluge
+maintainers:
+  - name: nikdoof
+    email: andy@tensixtyone.com
