@@ -33,7 +33,7 @@ The following tables lists the configurable parameters of the Sentry chart and t
 | Parameter                  | Description                         | Default                                                 |
 |----------------------------|-------------------------------------|---------------------------------------------------------|
 | `image.repository`         | Image repository | `linuxserver/deluge` |
-| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/linuxserver/deluge/tags/).| `v2.1.39-ls32`|
+| `image.tag`                | Image tag. Possible values listed [here](https://hub.docker.com/r/linuxserver/deluge/tags/).| `2.0.3-2201906121747ubuntu18.04.1-ls57`|
 | `image.pullPolicy`         | Image pull policy | `IfNotPresent` |
 | `strategyType`             | Specifies the strategy used to replace old Pods by new ones | `Recreate` |
 | `timezone`                 | Timezone the deluge instance should run as, e.g. 'America/New_York' | `UTC` |
@@ -45,12 +45,17 @@ The following tables lists the configurable parameters of the Sentry chart and t
 | `probes.readiness.initialDelaySeconds` | Specify readiness `initialDelaySeconds` parameter for the deployment | `60` |
 | `probes.readiness.failureThreshold`    | Specify readiness `failureThreshold` parameter for the deployment    | `5`  |
 | `probes.readiness.timeoutSeconds`      | Specify readiness `timeoutSeconds` parameter for the deployment      | `10` |
-| `Service.type`          | Kubernetes service type for the deluge GUI | `ClusterIP` |
-| `Service.port`          | Kubernetes port where the deluge GUI is exposed| `8083` |
-| `Service.annotations`   | Service annotations for the deluge GUI | `{}` |
-| `Service.labels`        | Custom labels | `{}` |
-| `Service.loadBalancerIP` | Loadbalance IP for the deluge GUI | `{}` |
-| `Service.loadBalancerSourceRanges` | List of IP CIDRs allowed access to load balancer (if supported)      | None
+| `webUiService.type`          | Kubernetes service type for the deluge GUI | `ClusterIP` |
+| `webUiService.port`          | Kubernetes port where the deluge GUI is exposed| `8112` |
+| `webUiService.annotations`   | Service annotations for the deluge GUI | `{}` |
+| `webUiService.labels`        | Custom labels | `{}` |
+| `webUiService.loadBalancerIP` | Loadbalance IP for the deluge GUI | `{}` |
+| `webUiService.loadBalancerSourceRanges` | List of IP CIDRs allowed access to load balancer (if supported)      | None
+| `btService.type`          | Kubernetes service type for the deluge Bittorrent ports | `NodePort` |
+| `btService.annotations`   | Service annotations for the deluge Bittorrent ports | `{}` |
+| `btService.labels`        | Custom labels | `{}` |
+| `btService.loadBalancerIP` | Loadbalance IP for the deluge Bittorrent ports | `{}` |
+| `btService.loadBalancerSourceRanges` | List of IP CIDRs allowed access to load balancer (if supported)      | None
 | `ingress.enabled`              | Enables Ingress | `false` |
 | `ingress.annotations`          | Ingress annotations | `{}` |
 | `ingress.labels`               | Custom labels                       | `{}`
@@ -64,6 +69,14 @@ The following tables lists the configurable parameters of the Sentry chart and t
 | `persistence.config.storageClass` | Type of persistent volume claim | `-` |
 | `persistence.config.accessMode`  | Persistence access mode | `ReadWriteOnce` |
 | `persistence.config.skipuninstall`  | Do not delete the pvc upon helm uninstall | `false` |
+| `persistence.downloads.enabled`      | Use persistent volume to store downloads | `true` |
+| `persistence.downloads.size`         | Size of persistent volume claim | `1Gi` |
+| `persistence.downloads.existingClaim`| Use an existing PVC to persist data | `nil` |
+| `persistence.downloads.subPath`  | Mount a sub directory of the persistent volume if set | `""` |
+| `persistence.downloads.storageClass` | Type of persistent volume claim | `-` |
+| `persistence.downloads.accessMode`  | Persistence access mode | `ReadWriteOnce` |
+| `persistence.downloads.skipuninstall`  | Do not delete the pvc upon helm uninstall | `false` |
+| `persistence.extraExistingClaimMounts` | Optionally add multiple existing claims to the container | `[]` |
 | `resources`                | CPU/Memory resource requests/limits | `{}` |
 | `nodeSelector`             | Node labels for pod assignment | `{}` |
 | `tolerations`              | Toleration labels for pod assignment | `[]` |
