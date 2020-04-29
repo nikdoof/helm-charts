@@ -39,6 +39,7 @@ The following tables lists the configurable parameters of the Sentry chart and t
 | `timezone`                 | Timezone the calibre-web instance should run as, e.g. 'America/New_York' | `UTC` |
 | `puid`                     | process userID the calibre-web instance should run as | `1001` |
 | `pgid`                     | process groupID the calibre-web instance should run as | `1001` |
+  `dockerMods`               | Enable "Docker Mods" for the Calibre-Web container | `nil` |
 | `probes.liveness.initialDelaySeconds`  | Specify liveness `initialDelaySeconds` parameter for the deployment  | `60` |
 | `probes.liveness.failureThreshold`     | Specify liveness `failureThreshold` parameter for the deployment     | `5`  |
 | `probes.liveness.timeoutSeconds`       | Specify liveness `timeoutSeconds` parameter for the deployment       | `10` |
