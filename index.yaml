@@ -1,0 +1,24 @@
+apiVersion: v1
+entries:
+  calibre-web:
+  - apiVersion: v1
+    appVersion: 0.6.6-ls58
+    created: "2020-04-29T07:23:19.100799347Z"
+    description: A simple web viewer for Calibre libraries
+    digest: 01fa21b57a68c2c95b1b09f5de890ef9c333e292f9c70f396817998aa41ce09b
+    home: https://github.com/nikdoof/home-k8s-flux/tree/master/charts/calibre-web
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-web-icon.png
+    keywords:
+    - calibre-web
+    - calibre
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: calibre-web
+    sources:
+    - https://hub.docker.com/r/linuxserver/calibre-web/
+    - https://github.com/janeczku/calibre-web
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/calibre-web-1.1.1/calibre-web-1.1.1.tgz
+    version: 1.1.1
+generated: "2020-04-29T07:23:19.010293034Z"
