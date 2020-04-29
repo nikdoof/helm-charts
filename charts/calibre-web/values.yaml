@@ -28,6 +28,11 @@ timezone: UTC
 puid: 1001
 pgid: 1001
 
+## Configure docker_mods for this container. For x86 systems you can uncomment the following
+## and enable ebook conversion tools in calbire-web
+##
+# dockerMods: linuxserver/calibre-web:calibre
+
 service:
   type: ClusterIP
   port: 8083
