@@ -28,6 +28,10 @@ timezone: UTC
 puid: 1001
 pgid: 1001
 
+## Configure docker_mods for this container. (https://github.com/linuxserver/docker-mods)
+##
+# dockerMods: linuxserver/deluge:ssh
+
 webuiservice:
   type: ClusterIP
   port: 8112

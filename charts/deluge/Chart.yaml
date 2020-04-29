@@ -1,16 +1,17 @@
 apiVersion: v1
-appVersion: 2.0.3-2201906121747ubuntu18.04.1-ls57
 description: Deluge is a Python BitTorrent client based on libtorrent
 name: deluge
-version: 1.0.1
+version: 1.1.0
 keywords:
   - deluge
   - libtorrent
-home: https://github.com/nikdoof/home-k8s-flux/tree/master/charts/deluge
-icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/deluge-icon.png
+home: https://github.com/nikdoof/helm-charts/charts/deluge
 sources:
   - https://hub.docker.com/r/linuxserver/deluge/
   - https://github.com/janeczku/deluge
+dependencies: []
 maintainers:
   - name: nikdoof
     email: andy@tensixtyone.com
+icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/deluge-icon.png
+appVersion: 2.0.3-2201906121747ubuntu18.04.1-ls57

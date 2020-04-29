@@ -70,6 +70,10 @@ spec:
               value: "{{ .Values.puid }}"
             - name: PGID
               value: "{{ .Values.pgid }}"
+            {{- if .values.dockerMods }}
+            - name: DOCKER_MODS
+              value: {{ .Values.dockerMods }}
+            {{- end }}
           volumeMounts:
             - mountPath: /config
               name: config
