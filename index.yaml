@@ -3,6 +3,15 @@ entries:
   aaisp-to-mqtt:
   - apiVersion: v1
     appVersion: "0.2"
+    created: "2020-05-04T11:26:33.14585224Z"
+    description: Pulls data from the AAISP CHAOSv2 API into MQTT
+    digest: 4a8c3ed746592ee04448b56525516ccd749a7d590089edcb582f4b96e1c440e6
+    name: aaisp-to-mqtt
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-to-mqtt-0.1.2/aaisp-to-mqtt-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "0.2"
     created: "2020-05-04T11:21:28.350160984Z"
     description: Pulls data from the AAISP CHAOSv2 API into MQTT
     digest: f5afbaa210875c0121caf6d0d4063411b02d9dfb20e74bd54aae01b9020811dd
