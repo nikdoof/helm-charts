@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  aaisp-to-mqtt:
+  - apiVersion: v1
+    appVersion: "0.2"
+    created: "2020-05-04T11:06:14.799775531Z"
+    description: Pulls data from the AAISP CHAOSv2 API into MQTT
+    digest: e876467e4cefdba82f72493defda4e148470013ed10837e8497ef520b211fa80
+    name: aaisp-to-mqtt
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-to-mqtt-0.1.0/aaisp-to-mqtt-0.1.0.tgz
+    version: 0.1.0
   calibre-web:
   - apiVersion: v1
     appVersion: 0.6.6-ls58
