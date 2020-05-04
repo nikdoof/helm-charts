@@ -8,8 +8,8 @@ image:
   repository: nikdoof/aaisp-to-mqtt
   tag: latest
   pullPolicy: IfNotPresent
+  imagePullSecrets: []
 
-imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
@@ -36,11 +36,6 @@ cronjob:
   successfulJobsHistoryLimit: 3
   failedJobsHistoryLimit: 1
   # startingDeadlineSeconds: 10
-  # imagePullSecrets: []
-  # resources: {}
-  # nodeSelector: {}
-  # tolerations: []
-  # affinity: {}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious

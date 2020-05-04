@@ -28,16 +28,16 @@ spec:
             app.kubernetes.io/managed-by: {{ include "aaisp-to-mqtt.name" . }}
         spec:
           restartPolicy: Never
-          {{- if (default .Values.image.pullSecrets .Values.cronjob.image.pullSecrets) }}
+          {{- if .Values.image.pullSecrets }}
           imagePullSecrets:
-          {{- range (default .Values.image.pullSecrets .Values.cronjob.image.pullSecrets) }}
+          {{- range .Values.image.pullSecrets }}
             - name: {{ . }}
           {{- end }}
           {{- end }}
           containers:
           - name: {{ .Chart.Name }}
-            image: "{{ default .Values.image.repository .Values.cronjob.image.repository }}:{{ default .Values.image.tag .Values.cronjob.image.tag }}"
-            imagePullPolicy: {{ default .Values.image.pullPolicy .Values.cronjob.image.pullPolicy }}
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
             env:
               - name: AAISP_USERNAME
                 valueFrom:
@@ -68,16 +68,16 @@ spec:
               - name: MQTT_TOPIC_PREFIX
                 value: {{ default "aaisp" .Values.mqtt.topicPrefix }}
           resources:
-{{ toYaml (default .Values.resources .Values.cronjob.resources) | indent 16 }}
-    {{- with (default .Values.nodeSelector .Values.cronjob.nodeSelector) }}
+{{ toYaml .Values.resources | indent 16 }}
+    {{- with .Values.nodeSelector }}
           nodeSelector:
 {{ toYaml . | indent 12 }}
     {{- end }}
-    {{- with (default .Values.affinity .Values.cronjob.affinity) }}
+    {{- with .Values.affinity }}
           affinity:
 {{ toYaml . | indent 12 }}
     {{- end }}
-    {{- with (default .Values.tolerations .Values.cronjob.tolerations) }}
+    {{- with .Values.tolerations }}
           tolerations:
 {{ toYaml . | indent 12 }}:
     {{- end }}
