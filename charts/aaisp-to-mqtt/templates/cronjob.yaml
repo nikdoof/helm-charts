@@ -53,7 +53,7 @@ spec:
                 value: {{ .Values.mqtt.broker }}
               - name: MQTT_PORT
                 value: {{- default 1883 .Values.mqtt.port }}
-            {{- .Values.mqtt.authenticated }}
+            {{- if .Values.mqtt.authenticated }}
               - name: MQTT_USERNAME
                 valueFrom:
                   secretKeyRef:
