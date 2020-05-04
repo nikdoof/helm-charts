@@ -1,0 +1,90 @@
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "aaisp-to-mqtt.fullname" . }}-cronjob
+  {{- if .Values.deploymentAnnotations }}
+  annotations:
+    {{- range $key, $value := .Values.deploymentAnnotations }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
+  {{- end }}
+  labels:
+    app.kubernetes.io/name: {{ include "aaisp-to-mqtt.name" . }}
+    helm.sh/chart: {{ include "aaisp-to-mqtt.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ include "aaisp-to-mqtt.name" . }}
+spec:
+  concurrencyPolicy: {{ .Values.cronjob.concurrencyPolicy }}
+  failedJobsHistoryLimit: {{ .Values.cronjob.failedJobsHistoryLimit }}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app.kubernetes.io/name: {{ include "aaisp-to-mqtt.name" . }}
+            helm.sh/chart: {{ include "aaisp-to-mqtt.chart" . }}
+            app.kubernetes.io/instance: {{ .Release.Name }}
+            app.kubernetes.io/managed-by: {{ include "aaisp-to-mqtt.name" . }}
+        spec:
+          restartPolicy: Never
+          {{- if (default .Values.image.pullSecrets .Values.cronjob.image.pullSecrets) }}
+          imagePullSecrets:
+          {{- range (default .Values.image.pullSecrets .Values.cronjob.image.pullSecrets) }}
+            - name: {{ . }}
+          {{- end }}
+          {{- end }}
+          containers:
+          - name: {{ .Chart.Name }}
+            image: "{{ default .Values.image.repository .Values.cronjob.image.repository }}:{{ default .Values.image.tag .Values.cronjob.image.tag }}"
+            imagePullPolicy: {{ default .Values.image.pullPolicy .Values.cronjob.image.pullPolicy }}
+            env:
+              - name: AAISP_USERNAME
+                valueFrom:
+                  secretKeyRef:
+                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    key: aaisp.username              
+              - name: AAISP_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    key: aaisp.password
+              - name: MQTT_BROKER
+                value: {{ .Values.mqtt.broker }}
+              - name: MQTT_PORT
+                value: {{- default 1883 .Values.mqtt.port }}
+            {{- .Values.mqtt.authenticated }}
+              - name: MQTT_USERNAME
+                valueFrom:
+                  secretKeyRef:
+                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    key: mqtt.username           
+              - name: MQTT_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    key: mqtt.password
+            {{- end }}
+              - name: MQTT_TOPIC_PREFIX
+                value: {{ default "aaisp" .Values.mqtt.topicPrefix }}
+          resources:
+{{ toYaml (default .Values.resources .Values.cronjob.resources) | indent 16 }}
+    {{- with (default .Values.nodeSelector .Values.cronjob.nodeSelector) }}
+          nodeSelector:
+{{ toYaml . | indent 12 }}
+    {{- end }}
+    {{- with (default .Values.affinity .Values.cronjob.affinity) }}
+          affinity:
+{{ toYaml . | indent 12 }}
+    {{- end }}
+    {{- with (default .Values.tolerations .Values.cronjob.tolerations) }}
+          tolerations:
+{{ toYaml . | indent 12 }}:
+    {{- end }}
+  schedule: {{ .Values.schedule | quote }}
+  successfulJobsHistoryLimit: {{ .Values.cronjob.successfulJobsHistoryLimit }}
+  failedJobsHistoryLimit: {{ .Values.cronjob.failedJobsHistoryLimit }}
+  concurrencyPolicy: Forbid
+  {{- if .Values.cronjob.startingDeadlineSeconds }}
+  startingDeadlineSeconds: {{ .Values.cronjob.startingDeadlineSeconds }}
+  {{- end }}
