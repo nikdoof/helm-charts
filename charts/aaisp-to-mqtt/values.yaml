@@ -6,9 +6,9 @@ replicaCount: 1
 
 image:
   repository: nikdoof/aaisp-to-mqtt
-  tag: latest
+  tag: 0.2.2
   pullPolicy: IfNotPresent
-  imagePullSecrets: []
+  # imagePullSecrets: []
 
 nameOverride: ""
 fullnameOverride: ""
@@ -19,7 +19,7 @@ fullnameOverride: ""
 
 ## Connection details
 ##
-aaisp:
+aaisp: {}
   # username: user1@a
   # password: password
 
@@ -32,7 +32,7 @@ mqtt:
   # topicPrefix: aaisp
 
 cronjob:
-  schedule: "*/10 * * *"
+  schedule: "*/10 * * * *"
   successfulJobsHistoryLimit: 3
   failedJobsHistoryLimit: 1
   # startingDeadlineSeconds: 10

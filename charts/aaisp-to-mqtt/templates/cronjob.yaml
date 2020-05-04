@@ -15,10 +15,16 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ include "aaisp-to-mqtt.name" . }}
 spec:
-  concurrencyPolicy: {{ .Values.cronjob.concurrencyPolicy }}
+  schedule: {{ .Values.cronjob.schedule | quote }}
+  successfulJobsHistoryLimit: {{ .Values.cronjob.successfulJobsHistoryLimit }}
   failedJobsHistoryLimit: {{ .Values.cronjob.failedJobsHistoryLimit }}
+  concurrencyPolicy: Forbid
+  {{- if .Values.cronjob.startingDeadlineSeconds }}
+  startingDeadlineSeconds: {{ .Values.cronjob.startingDeadlineSeconds }}
+  {{- end }}
   jobTemplate:
     spec:
+      backoffLimit: 0
       template:
         metadata:
           labels:
@@ -42,27 +48,27 @@ spec:
               - name: AAISP_USERNAME
                 valueFrom:
                   secretKeyRef:
-                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    name: {{ default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
                     key: aaisp.username              
               - name: AAISP_PASSWORD
                 valueFrom:
                   secretKeyRef:
-                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    name: {{ default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
                     key: aaisp.password
               - name: MQTT_BROKER
                 value: {{ .Values.mqtt.broker }}
               - name: MQTT_PORT
-                value: {{- default 1883 .Values.mqtt.port }}
+                value: "{{ default 1883 .Values.mqtt.port }}"
             {{- if .Values.mqtt.authenticated }}
               - name: MQTT_USERNAME
                 valueFrom:
                   secretKeyRef:
-                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    name: {{ default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
                     key: mqtt.username           
               - name: MQTT_PASSWORD
                 valueFrom:
                   secretKeyRef:
-                    name: {{- default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
+                    name: {{ default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
                     key: mqtt.password
             {{- end }}
               - name: MQTT_TOPIC_PREFIX
@@ -81,10 +87,3 @@ spec:
           tolerations:
 {{ toYaml . | indent 12 }}:
     {{- end }}
-  schedule: {{ .Values.schedule | quote }}
-  successfulJobsHistoryLimit: {{ .Values.cronjob.successfulJobsHistoryLimit }}
-  failedJobsHistoryLimit: {{ .Values.cronjob.failedJobsHistoryLimit }}
-  concurrencyPolicy: Forbid
-  {{- if .Values.cronjob.startingDeadlineSeconds }}
-  startingDeadlineSeconds: {{ .Values.cronjob.startingDeadlineSeconds }}
-  {{- end }}
