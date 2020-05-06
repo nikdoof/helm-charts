@@ -44,6 +44,8 @@ spec:
           - name: {{ .Chart.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: {{ .Values.image.pullPolicy }}
+            resources:
+{{ toYaml .Values.resources | indent 16 }}
             env:
               - name: AAISP_USERNAME
                 valueFrom:
@@ -73,8 +75,6 @@ spec:
             {{- end }}
               - name: MQTT_TOPIC_PREFIX
                 value: {{ default "aaisp" .Values.mqtt.topicPrefix }}
-          resources:
-{{ toYaml .Values.resources | indent 16 }}
     {{- with .Values.nodeSelector }}
           nodeSelector:
 {{ toYaml . | indent 12 }}
