@@ -3,6 +3,15 @@ entries:
   aaisp-to-mqtt:
   - apiVersion: v1
     appVersion: "0.2"
+    created: "2020-05-06T11:18:39.042612384Z"
+    description: Pulls data from the AAISP CHAOSv2 API into MQTT
+    digest: f1b9e5dca44622414a8248cdde43b75d1c4b73c476e035f6392573965b91e188
+    name: aaisp-to-mqtt
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-to-mqtt-0.2.4/aaisp-to-mqtt-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v1
+    appVersion: "0.2"
     created: "2020-05-04T13:25:26.801781447Z"
     description: Pulls data from the AAISP CHAOSv2 API into MQTT
     digest: 9f8d46542a912be47e756ceb344683b866b66d2c35e70730eb0e0e1d8b2b7680
@@ -97,4 +106,15 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/deluge-1.1.0/deluge-1.1.0.tgz
     version: 1.1.0
+  vsphere-influxdb-go:
+  - apiVersion: v1
+    appVersion: 0.8.5
+    created: "2020-05-06T11:18:39.115104106Z"
+    description: Collect VMware vCenter and ESXi performance metrics and send them
+      to InfluxDB
+    digest: 117caa83394646daed5abd533d9fbed2e035f885d5c5ba93ecd0a03b4f26e929
+    name: vsphere-influxdb-go
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vsphere-influxdb-go-0.1.0/vsphere-influxdb-go-0.1.0.tgz
+    version: 0.1.0
 generated: "2020-04-29T07:23:19.010293034Z"
