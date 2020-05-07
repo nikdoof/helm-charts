@@ -1,7 +1,7 @@
 apiVersion: v1
 description: Deluge is a Python BitTorrent client based on libtorrent
 name: deluge
-version: 1.1.2
+version: 1.2.0
 keywords:
   - deluge
   - libtorrent

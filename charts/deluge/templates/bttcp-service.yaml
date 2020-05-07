@@ -1,3 +1,5 @@
+---
+{{ if .Values.btservice.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -40,21 +42,14 @@ spec:
   externalTrafficPolicy: {{ .Values.btservice.externalTrafficPolicy }}
   {{- end }}
   ports:
-    - name: daemon
-      port: 58846
-      protocol: TCP
-      targetPort: daemon
-{{ if (eq .Values.btservice.type "NodePort") }}
-      nodePort: 58846
-{{ end }}
     - name: bt-tcp
       port: 58946
       protocol: TCP
       targetPort: bt-tcp
 {{ if (eq .Values.btservice.type "NodePort") }}
-      nodePort: 58946
+      nodePort: {{ default 30846 .Values.btservice.nodePort }}
 {{ end }}
   selector:
     app.kubernetes.io/name: {{ include "deluge.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
-    
+{{ end }}
