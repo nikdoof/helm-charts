@@ -5,7 +5,8 @@ This is a helm chart for [calibre-web](https://calibre-web.com/) leveraging the 
 ## TL;DR;
 
 ```shell
-$ helm install ./calibre-web
+$ helm repo add nikdoof https://nikdoof.github.io/helm-charts/
+$ helm install calibre-web
 ```
 
 ## Installing the Chart
@@ -13,7 +14,7 @@ $ helm install ./calibre-web
 To install the chart with the release name `my-release`:
 
 ```console
-helm install --name my-release ./calibre-web
+helm install --name my-release calibre-web
 ```
 
 ## Uninstalling the Chart
@@ -101,4 +102,4 @@ If you get `Error: rendered manifests contain a resource that already exists. Un
 
 ---
 
-Read through the [values.yaml](https://github.com/nikdoof/home-k8s-flux/blob/master/charts/calibre-web/values.yaml) file. It has several commented out suggested values.
+Read through the [values.yaml](https://github.com/nikdoof/helm-charts/tree/master/charts/calibre-web/values.yaml) file. It has several commented out suggested values.
