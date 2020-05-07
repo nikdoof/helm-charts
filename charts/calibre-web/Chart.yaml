@@ -2,7 +2,7 @@ apiVersion: v1
 appVersion: 0.6.6-ls58
 description: A simple web viewer for Calibre libraries
 name: calibre-web
-version: 1.1.1
+version: 1.1.2
 keywords:
   - calibre-web
   - calibre
