@@ -3,6 +3,25 @@ entries:
   aaisp-to-mqtt:
   - apiVersion: v1
     appVersion: "0.2"
+    created: "2020-05-07T20:55:59.067565869Z"
+    description: Pulls data from the AAISP CHAOSv2 API into MQTT
+    digest: 4fd0bbe72327807bd07d9d0aa469801bfea23914eccfb79925a476f25289f611
+    home: https://github.com/nikdoof/aaisp-to-mqtt
+    keywords:
+    - aaisp
+    - mqtt
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp-to-mqtt
+    sources:
+    - https://hub.docker.com/r/nikdoof/aaisp-to-mqtt/
+    - https://github.com/natm/aaisp-to-mqtt
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-to-mqtt-0.2.5/aaisp-to-mqtt-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v1
+    appVersion: "0.2"
     created: "2020-05-06T11:18:39.042612384Z"
     description: Pulls data from the AAISP CHAOSv2 API into MQTT
     digest: f1b9e5dca44622414a8248cdde43b75d1c4b73c476e035f6392573965b91e188
@@ -67,6 +86,25 @@ entries:
   calibre-web:
   - apiVersion: v1
     appVersion: 0.6.6-ls58
+    created: "2020-05-07T20:55:59.129362645Z"
+    description: A simple web viewer for Calibre libraries
+    digest: d7ae71fda08c60e1083762b4f67aaf05392b8d344267fab73b6f9f177485510b
+    home: https://github.com/janeczku/calibre-web
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-web-icon.png
+    keywords:
+    - calibre-web
+    - calibre
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: calibre-web
+    sources:
+    - https://hub.docker.com/r/linuxserver/calibre-web/
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/calibre-web-1.1.3/calibre-web-1.1.3.tgz
+    version: 1.1.3
+  - apiVersion: v1
+    appVersion: 0.6.6-ls58
     created: "2020-05-07T15:55:43.523810612Z"
     description: A simple web viewer for Calibre libraries
     digest: a6f02fba974268860cbb799cc7197c3fb86abc2bbfae12d35c093105014bc0fa
@@ -108,6 +146,25 @@ entries:
   deluge:
   - apiVersion: v1
     appVersion: 2.0.3-2201906121747ubuntu18.04.1-ls57
+    created: "2020-05-07T20:55:59.283440588Z"
+    description: Deluge is a Python BitTorrent client based on libtorrent
+    digest: 03d2ec919c24f97c19af6c2bf2c5cf657f8c8da7bf385a5c783983b4675cc57d
+    home: https://github.com/deluge-torrent/deluge
+    icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/deluge-icon.png
+    keywords:
+    - deluge
+    - libtorrent
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: deluge
+    sources:
+    - https://hub.docker.com/r/linuxserver/deluge/
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/deluge-1.2.0/deluge-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v1
+    appVersion: 2.0.3-2201906121747ubuntu18.04.1-ls57
     created: "2020-04-29T07:58:55.514668948Z"
     description: Deluge is a Python BitTorrent client based on libtorrent
     digest: abda1e2a1c5c0bc87bb9fa81401aeb6ea181405d2e13348a131382c1887355a0
@@ -127,6 +184,27 @@ entries:
     - https://github.com/nikdoof/helm-charts/releases/download/deluge-1.1.0/deluge-1.1.0.tgz
     version: 1.1.0
   vsphere-influxdb-go:
+  - apiVersion: v1
+    appVersion: 0.8.5
+    created: "2020-05-07T20:55:59.358078319Z"
+    description: Collect VMware vCenter and ESXi performance metrics and send them
+      to InfluxDB
+    digest: a23708aeda47cecbf310f2e7d8fef784d10e3014e04ac96563b709bd44598b23
+    home: https://github.com/Oxalide/vsphere-influxdb-go
+    keywords:
+    - vsphere
+    - influxdb
+    - esx
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vsphere-influxdb-go
+    sources:
+    - https://hub.docker.com/r/nikdoof/vsphere-influxdb-go/
+    - https://github.com/janeczku/calibre-web
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vsphere-influxdb-go-0.1.1/vsphere-influxdb-go-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v1
     appVersion: 0.8.5
     created: "2020-05-06T11:18:39.115104106Z"
