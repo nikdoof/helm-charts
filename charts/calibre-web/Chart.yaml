@@ -6,11 +6,10 @@ version: 1.1.2
 keywords:
   - calibre-web
   - calibre
-home: https://github.com/nikdoof/home-k8s-flux/tree/master/charts/calibre-web
+home: https://github.com/janeczku/calibre-web
 icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-web-icon.png
 sources:
   - https://hub.docker.com/r/linuxserver/calibre-web/
-  - https://github.com/janeczku/calibre-web
 maintainers:
   - name: nikdoof
     email: andy@tensixtyone.com

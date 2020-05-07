@@ -5,10 +5,9 @@ version: 1.1.1
 keywords:
   - deluge
   - libtorrent
-home: https://github.com/nikdoof/helm-charts/charts/deluge
+home: https://github.com/deluge-torrent/deluge
 sources:
   - https://hub.docker.com/r/linuxserver/deluge/
-  - https://github.com/janeczku/deluge
 dependencies: []
 maintainers:
   - name: nikdoof
