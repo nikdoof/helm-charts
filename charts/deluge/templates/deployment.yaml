@@ -70,7 +70,7 @@ spec:
               value: "{{ .Values.puid }}"
             - name: PGID
               value: "{{ .Values.pgid }}"
-            {{- if .values.dockerMods }}
+            {{- if .Values.dockerMods }}
             - name: DOCKER_MODS
               value: {{ .Values.dockerMods }}
             {{- end }}
