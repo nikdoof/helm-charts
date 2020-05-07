@@ -2,4 +2,14 @@ apiVersion: v1
 appVersion: "0.2"
 description: Pulls data from the AAISP CHAOSv2 API into MQTT
 name: aaisp-to-mqtt
-version: 0.2.4
+version: 0.2.5
+keywords:
+  - aaisp
+  - mqtt
+home: https://github.com/nikdoof/aaisp-to-mqtt
+sources:
+  - https://hub.docker.com/r/nikdoof/aaisp-to-mqtt/
+  - https://github.com/natm/aaisp-to-mqtt
+maintainers:
+  - name: nikdoof
+    email: andy@tensixtyone.com

@@ -5,7 +5,8 @@ This is a helm chart for [deluge](https://deluge.com/) leveraging the [Linuxserv
 ## TL;DR;
 
 ```shell
-$ helm install ./deluge
+$ helm repo add nikdoof https://nikdoof.github.io/helm-charts/
+$ helm install deluge
 ```
 
 ## Installing the Chart
@@ -13,7 +14,7 @@ $ helm install ./deluge
 To install the chart with the release name `my-release`:
 
 ```console
-helm install --name my-release ./deluge
+helm install --name my-release deluge
 ```
 
 ## Uninstalling the Chart
@@ -105,4 +106,4 @@ If you get `Error: rendered manifests contain a resource that already exists. Un
 
 ---
 
-Read through the [values.yaml](https://github.com/nikdoof/home-k8s-flux/blob/master/charts/deluge/values.yaml) file. It has several commented out suggested values.
+Read through the [values.yaml](https://github.com/nikdoof/helm-charts/tree/master/charts/deluge/values.yaml) file. It has several commented out suggested values.
