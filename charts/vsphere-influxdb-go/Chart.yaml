@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "0.8.5"
 description: Collect VMware vCenter and ESXi performance metrics and send them to InfluxDB
 name: vsphere-influxdb-go
-version: 0.1.0
+version: 0.1.1
