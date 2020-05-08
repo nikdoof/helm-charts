@@ -186,6 +186,27 @@ entries:
   vsphere-influxdb-go:
   - apiVersion: v1
     appVersion: 0.8.5
+    created: "2020-05-08T09:54:05.56591432Z"
+    description: Collect VMware vCenter and ESXi performance metrics and send them
+      to InfluxDB
+    digest: 54afc2c3034c370a88a5252d58ee9d4a417f4a0db6fc02f3950fe04370a98da2
+    home: https://github.com/Oxalide/vsphere-influxdb-go
+    keywords:
+    - vsphere
+    - influxdb
+    - esx
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vsphere-influxdb-go
+    sources:
+    - https://hub.docker.com/r/nikdoof/vsphere-influxdb-go/
+    - https://github.com/janeczku/calibre-web
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vsphere-influxdb-go-0.2.0/vsphere-influxdb-go-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    appVersion: 0.8.5
     created: "2020-05-07T20:55:59.358078319Z"
     description: Collect VMware vCenter and ESXi performance metrics and send them
       to InfluxDB
