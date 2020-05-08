@@ -1,80 +1,5 @@
 ---
 apiVersion: v1
-data:
-  config.json: "{\r\n    \"Domain\": \".lab\",\r\n    \"RemoveHostDomainName\": false,\r\n
-    \   \"Interval\": 60,\r\n    \"VCenters\": [],\r\n    \"InfluxDB\": {\r\n        \"Prefix\":
-    \"vsphere_\",\r\n        \"Hostname\": \"http://influxdb:8086\",\r\n        \"Database\":
-    \"vmware_performance\"\r\n    },\r\n    \"Metrics\": [\r\n        {\r\n            \"ObjectType\":
-    [\r\n                \"VirtualMachine\",\r\n                \"HostSystem\"\r\n
-    \           ],\r\n            \"Definition\": [\r\n                {\r\n                    \"Metric\":
-    \"cpu.usage.average\",\r\n                    \"Instances\": \"*\"\r\n                },\r\n
-    \               {\r\n                    \"Metric\": \"cpu.usage.maximum\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"cpu.usagemhz.average\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"cpu.usagemhz.maximum\",\r\n                    \"Instances\": \"*\"\r\n                },\r\n
-    \               {\r\n                    \"Metric\": \"cpu.wait.summation\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"cpu.system.summation\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"cpu.ready.summation\",\r\n                    \"Instances\": \"*\"\r\n                },\r\n
-    \               {\r\n                    \"Metric\": \"mem.usage.average\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"mem.usage.maximum\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"mem.consumed.average\",\r\n                    \"Instances\": \"*\"\r\n                },\r\n
-    \               {\r\n                    \"Metric\": \"mem.consumed.maximum\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"mem.active.average\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"mem.active.maximum\",\r\n                    \"Instances\": \"*\"\r\n                },\r\n
-    \               {\r\n                    \"Metric\": \"mem.vmmemctl.average\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"mem.vmmemctl.maximum\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"mem.totalCapacity.average\",\r\n                    \"Instances\": \"*\"\r\n
-    \               },\r\n                {\r\n                    \"Metric\": \"net.packetsRx.summation\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"net.packetsTx.summation\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"net.throughput.usage.average\",\r\n                    \"Instances\": \"*\"\r\n
-    \               },\r\n                {\r\n                    \"Metric\": \"net.received.average\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"net.transmitted.average\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"net.throughput.usage.nfs.average\",\r\n                    \"Instances\": \"*\"\r\n
-    \               },\r\n                {\r\n                    \"Metric\": \"datastore.numberReadAveraged.average\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"datastore.numberWriteAveraged.average\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"datastore.read.average\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"datastore.write.average\",\r\n                    \"Instances\": \"*\"\r\n                },\r\n
-    \               {\r\n                    \"Metric\": \"datastore.totalReadLatency.average\",\r\n
-    \                   \"Instances\": \"*\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"datastore.totalWriteLatency.average\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"mem.capacity.provisioned.average\",\r\n                    \"Instances\": \"*\"\r\n
-    \               },\r\n                {\r\n                    \"Metric\": \"cpu.corecount.provisioned.average\",\r\n
-    \                   \"Instances\": \"*\"\r\n                }\r\n            ]\r\n
-    \       },\r\n        {\r\n            \"ObjectType\": [\r\n                \"VirtualMachine\"\r\n
-    \           ],\r\n            \"Definition\": [\r\n                {\r\n                    \"Metric\":
-    \"datastore.datastoreVMObservedLatency.latest\",\r\n                    \"Instances\":
-    \"*\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"ObjectType\":
-    [\r\n                \"HostSystem\"\r\n            ],\r\n            \"Definition\":
-    [\r\n                {\r\n                    \"Metric\": \"disk.maxTotalLatency.latest\",\r\n
-    \                   \"Instances\": \"\"\r\n                },\r\n                {\r\n
-    \                   \"Metric\": \"disk.numberReadAveraged.average\",\r\n                    \"Instances\":
-    \"*\"\r\n                },\r\n                {\r\n                    \"Metric\":
-    \"disk.numberWriteAveraged.average\",\r\n                    \"Instances\": \"*\"\r\n
-    \               },\r\n                {\r\n                    \"Metric\": \"net.throughput.contention.summation\",\r\n
-    \                   \"Instances\": \"*\"\r\n                }\r\n            ]\r\n
-    \       },\r\n        {\r\n            \"ObjectType\": [\r\n                \"Datastore\"\r\n
-    \           ],\r\n            \"Definition\": [\r\n                {\r\n                    \"Metric\":
-    \"disk.capacity.latest\",\r\n                    \"Instances\": \"*\"\r\n                },\r\n
-    \               {\r\n                    \"Metric\": \"disk.used.latest\",\r\n
-    \                   \"Instances\": \"*\"\r\n                }\r\n            ]\r\n
-    \       }\r\n    ]\r\n}"
 kind: ConfigMap
 metadata:
   name: vsphere-influxdb-go-config
@@ -83,4 +8,6 @@ metadata:
     helm.sh/chart: {{ include "vsphere-influxdb-go.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ include "vsphere-influxdb-go.name" . }}
-
+data:
+  config.json: |-
+{{ toJson .Values.config | indent 4}}
