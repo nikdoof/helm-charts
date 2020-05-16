@@ -22,9 +22,9 @@ You can then run `helm search nikdoof` to see the charts.
 
 See [charts folder](./charts) for a complete list.
 
-* [aaisp-to-mqtt](./charts/aaisp-to-mqtt) - A tool to pull information from [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API and output to MQTT
+* [aaisp2mqtt](./charts/aaisp2mqtt) - A tool to pull information from [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API and output to MQTT
 * [calibre-web](./charts/calibre-web) - Web app for browsing, reading and downloading eBooks stored in a Calibre database
-* [deluge](./charts/deluge) - Deluge torrent client 
+* [deluge](./charts/deluge) - Deluge torrent client
 
 
 ## License
