@@ -1,0 +1,4 @@
+---
+z2ma:
+  broker: mqtt.svc.cluster.local
+  existingSecretName: test
