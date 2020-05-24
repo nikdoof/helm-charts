@@ -1,0 +1,5 @@
+---
+z2ma:
+  broker: mqtt.svc.cluster.local
+  username: test
+  password: test2
