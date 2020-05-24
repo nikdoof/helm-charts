@@ -256,4 +256,24 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/vsphere-influxdb-go-0.1.0/vsphere-influxdb-go-0.1.0.tgz
     version: 0.1.0
+  zigbee2mqttassistant:
+  - apiVersion: v1
+    appVersion: 0.3.165
+    created: "2020-05-24T10:08:03.489079052Z"
+    description: A web GUI for Zigbee2Mqtt
+    digest: 1caa9c66ee5f13787b0dc218c40492b0c389aa5578913003bab9174dbdfd6467
+    home: https://github.com/yllibed/Zigbee2MqttAssistant
+    keywords:
+    - zigbee
+    - mqtt
+    - homeassistant
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: zigbee2mqttassistant
+    sources:
+    - https://hub.docker.com/r/carldebilly/zigbee2mqttassistant
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
+    version: 0.1.0
 generated: "2020-04-29T07:23:19.010293034Z"
