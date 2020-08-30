@@ -18,7 +18,7 @@ spec:
   schedule: {{ .Values.cronjob.schedule | quote }}
   successfulJobsHistoryLimit: {{ .Values.cronjob.successfulJobsHistoryLimit }}
   failedJobsHistoryLimit: {{ .Values.cronjob.failedJobsHistoryLimit }}
-  concurrencyPolicy: Forbid
+  concurrencyPolicy: {{ .Values.cronjob.concurrencyPolicy }}
   {{- if .Values.cronjob.startingDeadlineSeconds }}
   startingDeadlineSeconds: {{ .Values.cronjob.startingDeadlineSeconds }}
   {{- end }}
