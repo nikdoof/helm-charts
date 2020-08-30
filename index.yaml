@@ -86,6 +86,25 @@ entries:
   aaisp2mqtt:
   - apiVersion: v1
     appVersion: 0.3.0
+    created: "2020-08-30T06:17:25.69940737Z"
+    description: Pulls data from the AAISP CHAOSv2 API into MQTT
+    digest: dc85812845cd5ff92ca32204390ec716cb4c402d896336887d81bf1c3e336ee0
+    home: https://github.com/nikdoof/aaisp2mqtt
+    keywords:
+    - aaisp
+    - mqtt
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp2mqtt
+    sources:
+    - https://hub.docker.com/r/nikdoof/aaisp2mqtt/
+    - https://github.com/natm/aaisp2mqtt
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp2mqtt-0.3.1/aaisp2mqtt-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v1
+    appVersion: 0.3.0
     created: "2020-05-16T15:54:46.589949339Z"
     description: Pulls data from the AAISP CHAOSv2 API into MQTT
     digest: a0ec9ee87fe8ed11a7df8529048661890094828250761f02df08d8cffd60b2e3
