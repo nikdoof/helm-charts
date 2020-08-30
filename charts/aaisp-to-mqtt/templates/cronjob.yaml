@@ -18,7 +18,7 @@ spec:
   schedule: {{ .Values.cronjob.schedule | quote }}
   successfulJobsHistoryLimit: {{ .Values.cronjob.successfulJobsHistoryLimit }}
   failedJobsHistoryLimit: {{ .Values.cronjob.failedJobsHistoryLimit }}
-  concurrencyPolicy: Forbid
+  concurrencyPolicy: {{ .Values.cronjob.concurrencyPolicy }}
   {{- if .Values.cronjob.startingDeadlineSeconds }}
   startingDeadlineSeconds: {{ .Values.cronjob.startingDeadlineSeconds }}
   {{- end }}
@@ -51,7 +51,7 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: {{ default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
-                    key: aaisp.username              
+                    key: aaisp.username
               - name: AAISP_PASSWORD
                 valueFrom:
                   secretKeyRef:
@@ -66,7 +66,7 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: {{ default "aaisp-to-mqtt-secret" .Values.existingSecretName }}
-                    key: mqtt.username           
+                    key: mqtt.username
               - name: MQTT_PASSWORD
                 valueFrom:
                   secretKeyRef:
