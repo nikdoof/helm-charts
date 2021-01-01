@@ -5,7 +5,10 @@ name: nfs-client-provisioner
 home: https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
 version: 1.2.13
 sources:
-- https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+  - https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
 keywords:
-- nfs
-- storage
+  - nfs
+  - storage
+maintainers:
+  - name: nikdoof
+    email: andy@tensixtyone.com
