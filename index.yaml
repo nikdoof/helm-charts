@@ -241,12 +241,28 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/deluge-1.1.0/deluge-1.1.0.tgz
     version: 1.1.0
+  nfs-client-provisioner:
+  - apiVersion: v1
+    appVersion: 3.1.0
+    created: "2021-01-01T13:48:06.470017333Z"
+    deprecated: true
+    description: nfs-client is an automatic provisioner that used your *already configured* NFS server, automatically creating Persistent Volumes.
+    digest: e30a7a563dd068f3ee348182dfd234d589edc9ef30423b4b7f9f3e6b1fb1a1d4
+    home: https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    keywords:
+    - nfs
+    - storage
+    name: nfs-client-provisioner
+    sources:
+    - https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/nfs-client-provisioner-1.2.12/nfs-client-provisioner-1.2.12.tgz
+    version: 1.2.12
   vsphere-influxdb-go:
   - apiVersion: v1
     appVersion: 0.8.5
     created: "2020-05-08T09:54:05.56591432Z"
-    description: Collect VMware vCenter and ESXi performance metrics and send them
-      to InfluxDB
+    description: Collect VMware vCenter and ESXi performance metrics and send them to InfluxDB
     digest: 54afc2c3034c370a88a5252d58ee9d4a417f4a0db6fc02f3950fe04370a98da2
     home: https://github.com/Oxalide/vsphere-influxdb-go
     keywords:
@@ -266,8 +282,7 @@ entries:
   - apiVersion: v1
     appVersion: 0.8.5
     created: "2020-05-07T20:55:59.358078319Z"
-    description: Collect VMware vCenter and ESXi performance metrics and send them
-      to InfluxDB
+    description: Collect VMware vCenter and ESXi performance metrics and send them to InfluxDB
     digest: a23708aeda47cecbf310f2e7d8fef784d10e3014e04ac96563b709bd44598b23
     home: https://github.com/Oxalide/vsphere-influxdb-go
     keywords:
@@ -287,8 +302,7 @@ entries:
   - apiVersion: v1
     appVersion: 0.8.5
     created: "2020-05-06T11:18:39.115104106Z"
-    description: Collect VMware vCenter and ESXi performance metrics and send them
-      to InfluxDB
+    description: Collect VMware vCenter and ESXi performance metrics and send them to InfluxDB
     digest: 117caa83394646daed5abd533d9fbed2e035f885d5c5ba93ecd0a03b4f26e929
     name: vsphere-influxdb-go
     urls:
