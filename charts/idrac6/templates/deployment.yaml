@@ -1,0 +1,135 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "idrac6.fullname" . }}
+  {{- if .Values.deploymentAnnotations }}
+  annotations:
+    {{- range $key, $value := .Values.deploymentAnnotations }}
+    {{ $key }}: {{ $value | quote }}
+    {{- end }}
+  {{- end }}
+  labels:
+    app.kubernetes.io/name: {{ include "idrac6.name" . }}
+    helm.sh/chart: {{ include "idrac6.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  strategy:
+    type: {{ .Values.strategyType }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "idrac6.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "idrac6.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+      {{- if .Values.podAnnotations }}
+      annotations:
+        {{- range $key, $value := .Values.podAnnotations }}
+        {{ $key }}: {{ $value | quote }}
+        {{- end }}
+      {{- end }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 5800
+              protocol: TCP
+          livenessProbe:
+            tcpSocket:
+              port: http
+            initialDelaySeconds: {{ .Values.probes.liveness.initialDelaySeconds }}
+            failureThreshold: {{ .Values.probes.liveness.failureThreshold }}
+            timeoutSeconds: {{ .Values.probes.liveness.timeoutSeconds }}
+          readinessProbe:
+            tcpSocket:
+              port: http
+            initialDelaySeconds: {{ .Values.probes.readiness.initialDelaySeconds }}
+            failureThreshold: {{ .Values.probes.readiness.failureThreshold }}
+            timeoutSeconds: {{ .Values.probes.readiness.timeoutSeconds }}
+          env:
+            - name: TZ
+              value: "{{ .Values.timezone }}"
+            - name: USER_ID
+              value: "{{ .Values.puid }}"
+            - name: GROUP_ID
+              value: "{{ .Values.pgid }}"
+            - name: IDRAC_HOST
+              value: "{{ .Values.idrac.host }}"
+            - name: IDRAC_USER
+              value: "{{ .Values.idrac.user }}"
+            - name: IDRAC_PASSWORD
+              value: "{{ .Values.idrac.password }}"
+            - name: IDRAC_PORT
+              value: "{{ .Values.idrac.port }}"
+            - name: IDRAC_KEYCODE_HACK
+              value: "{{ .Values.idrac.keycode_hack }}"
+          volumeMounts:
+            - mountPath: /app
+              name: app
+              {{- if .Values.persistence.app.subPath }}
+              subPath: "{{ .Values.persistence.config.subPath }}"
+              {{- end }}
+            - mountPath: /vmedia
+              name: vmedia
+            {{- if .Values.persistence.vmedia.subPath }}
+              subPath: {{ .Values.persistence.vmedia.subPath }}
+            {{- end }}
+            - mountPath: /screenshots
+              name: screenshots
+            {{- if .Values.persistence.screenshots.subPath }}
+              subPath: {{ .Values.persistence.screenshots.subPath }}
+            {{- end }}
+            {{- range .Values.persistence.extraExistingClaimMounts }}
+            - name: {{ .name }}
+              mountPath: {{ .mountPath }}
+              readOnly: {{ .readOnly }}
+            {{- end }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+      volumes:
+      - name: app
+      {{- if .Values.persistence.app.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ if .Values.persistence.app.existingClaim }}{{ .Values.persistence.app.existingClaim }}{{- else }}{{ template "idrac6.fullname" . }}-app{{- end }}
+      {{- else }}
+        emptyDir: {}
+      {{ end }}
+      - name: vmedia
+      {{- if .Values.persistence.vmedia.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ if .Values.persistence.vmedia.existingClaim }}{{ .Values.persistence.vmedia.existingClaim }}{{- else }}{{ template "idrac6.fullname" . }}-vmedia{{- end }}
+      {{- else }}
+        emptyDir: {}
+      {{- end }}
+      - name: screenshots
+      {{- if .Values.persistence.screenshots.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ if .Values.persistence.screenshots.existingClaim }}{{ .Values.persistence.screenshots.existingClaim }}{{- else }}{{ template "idrac6.fullname" . }}-screenshots{{- end }}
+      {{- else }}
+        emptyDir: {}
+      {{- end }}
+      {{- range .Values.persistence.extraExistingClaimMounts }}
+      - name: {{ .name }}
+        persistentVolumeClaim:
+          claimName: {{ .existingClaim }}
+      {{- end }}
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
