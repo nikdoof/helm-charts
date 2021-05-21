@@ -1,0 +1,14 @@
+apiVersion: v1
+appVersion: '0.5'
+description: iDRAC 6 web interface and VNC proxy
+name: idrac6
+version: 0.0.1
+keywords:
+  - dell
+  - idrac
+home: https://github.com/DomiStyle/docker-idrac6
+sources:
+  - https://hub.docker.com/r/linuxserver/calibre-web/
+maintainers:
+  - name: nikdoof
+    email: andy@tensixtyone.com

@@ -1,0 +1,28 @@
+{{- if and .Values.persistence.screenshots.enabled (not .Values.persistence.screenshots.existingClaim) }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "idrac6.fullname" . }}-app
+  {{- if .Values.persistence.screenshots.skipuninstall }}
+  annotations:
+    "helm.sh/resource-policy": keep
+  {{- end }}
+  labels:
+    app.kubernetes.io/name: {{ include "idrac6.name" . }}
+    helm.sh/chart: {{ include "idrac6.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.screenshots.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.screenshots.size | quote }}
+{{- if .Values.persistence.screenshots.storageClass }}
+{{- if (eq "-" .Values.persistence.screenshots.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.persistence.screenshots.storageClass }}"
+{{- end }}
+{{- end }}
+{{- end -}}

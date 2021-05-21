@@ -1,0 +1,28 @@
+{{- if and .Values.persistence.app.enabled (not .Values.persistence.app.existingClaim) }}
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ template "idrac6.fullname" . }}-app
+  {{- if .Values.persistence.app.skipuninstall }}
+  annotations:
+    "helm.sh/resource-policy": keep
+  {{- end }}
+  labels:
+    app.kubernetes.io/name: {{ include "idrac6.name" . }}
+    helm.sh/chart: {{ include "idrac6.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.app.accessMode | quote }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.app.size | quote }}
+{{- if .Values.persistence.app.storageClass }}
+{{- if (eq "-" .Values.persistence.app.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.persistence.app.storageClass }}"
+{{- end }}
+{{- end }}
+{{- end -}}
