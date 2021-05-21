@@ -28,11 +28,14 @@ timezone: UTC
 puid: 1000
 pgid: 1000
 
+# Existing secret, overrides idrac values
+# existingSecret: test
+
 # iDRAC connection details
 idrac:
   host:
-  user:
-  password:
+  username: root
+  password: calvin
   port: 443
   keycode_hack: false
 

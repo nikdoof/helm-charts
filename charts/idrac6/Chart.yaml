@@ -2,7 +2,7 @@ apiVersion: v1
 appVersion: '0.5'
 description: iDRAC 6 web interface and VNC proxy
 name: idrac6
-version: 0.0.1
+version: 0.0.2
 keywords:
   - dell
   - idrac

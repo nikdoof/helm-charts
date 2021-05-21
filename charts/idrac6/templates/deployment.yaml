@@ -62,11 +62,20 @@ spec:
             - name: GROUP_ID
               value: "{{ .Values.pgid }}"
             - name: IDRAC_HOST
-              value: "{{ .Values.idrac.host }}"
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.existingSecretName | default (printf "%s-secret" (include "idrac6.fullname" .)) }}
+                  key: idrac.host
             - name: IDRAC_USER
-              value: "{{ .Values.idrac.user }}"
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.existingSecretName | default (printf "%s-secret" (include "idrac6.fullname" .)) }}
+                  key: idrac.username
             - name: IDRAC_PASSWORD
-              value: "{{ .Values.idrac.password }}"
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.existingSecretName | default (printf "%s-secret" (include "idrac6.fullname" .)) }}
+                  key: idrac.password
             - name: IDRAC_PORT
               value: "{{ .Values.idrac.port }}"
             - name: IDRAC_KEYCODE_HACK
