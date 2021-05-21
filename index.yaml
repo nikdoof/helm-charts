@@ -244,6 +244,24 @@ entries:
   idrac6:
   - apiVersion: v1
     appVersion: "0.5"
+    created: "2021-05-21T11:31:49.765804095Z"
+    description: iDRAC 6 web interface and VNC proxy
+    digest: c8b90f737d51a8bff93afec5a623105114a4cf85a7eea288d71efccce65612b6
+    home: https://github.com/DomiStyle/docker-idrac6
+    keywords:
+    - dell
+    - idrac
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: idrac6
+    sources:
+    - https://hub.docker.com/r/linuxserver/calibre-web/
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/idrac6-0.0.2/idrac6-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v1
+    appVersion: "0.5"
     created: "2021-05-21T10:39:59.928045273Z"
     description: iDRAC 6 web interface and VNC proxy
     digest: 2cd845cda4eaad5fefacf43b0062d05beb4b6d0a56cdcd0a52fb58ac648e01c5
