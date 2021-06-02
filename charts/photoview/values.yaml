@@ -18,6 +18,8 @@ env:
   PHOTOVIEW_DATABASE_DRIVER: sqlite
   PHOTOVIEW_SQLITE_PATH: /config
   PHOTOVIEW_MEDIA_CACHE: /app/cache
+  PHOTOVIEW_SERVE_UI: '1'
+  PHOTOVIEW_LISTEN_IP: '0.0.0.0'
 
   # PHOTOVIEW_MYSQL_URL: "photoview:photoview-pass@tcp(db)/photoview"
   # PHOTOVIEW_POSTGRES_URL: ""
