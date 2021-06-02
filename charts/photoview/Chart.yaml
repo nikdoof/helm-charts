@@ -5,23 +5,23 @@ name: photoview
 version: 0.0.1
 kubeVersion: ">=1.16.0-0"
 keywords:
-- photoview
+  - photoview
 home: https://github.com/nikdoof/helm-charts/tree/master/charts/photoview
 sources:
-- https://github.com/photoview/photoview
-- https://hub.docker.com/viktorstrate/photoview
+  - https://github.com/photoview/photoview
+  - https://hub.docker.com/viktorstrate/photoview
 maintainers:
-- name: Andrew Williams
-  url: https://github.com/nikdoof/
+  - name: Andrew Williams
+    url: https://github.com/nikdoof/
 dependencies:
-- name: common
-  repository: https://library-charts.k8s-at-home.com
-  version: 2.5.0
-- name: postgresql
-  version: 10.4.8
-  repository: https://charts.bitnami.com/bitnami
-  condition: postgresql.enabled
-- name: mariadb
-  version: 9.3.13
-  repository: https://charts.bitnami.com/bitnami
-  condition: mariadb.enabled
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 2.5.0
+  - name: postgresql
+    version: 10.4.8
+    repository: https://charts.bitnami.com/bitnami
+    condition: postgresql.enabled
+  - name: mariadb
+    version: 9.3.13
+    repository: https://charts.bitnami.com/bitnami
+    condition: mariadb.enabled
