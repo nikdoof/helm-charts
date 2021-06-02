@@ -1,0 +1,82 @@
+
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
+#
+
+image:
+  repository: viktorstrate/photoview
+  pullPolicy: IfNotPresent
+  tag: 2.3.4
+
+strategy:
+  type: Recreate
+
+# View https://photoview.github.io/docs/installation-environment-variables/ for more examples
+env:
+  PHOTOVIEW_DATABASE_DRIVER: sqlite
+  PHOTOVIEW_SQLITE_PATH: /config
+  PHOTOVIEW_MEDIA_CACHE: /app/cache
+
+  # PHOTOVIEW_MYSQL_URL: "photoview:photoview-pass@tcp(db)/photoview"
+  # PHOTOVIEW_POSTGRES_URL: ""
+
+  # Optional: To enable map related features, you need to create a mapbox token.
+  # A token can be generated for free here https://account.mapbox.com/access-tokens/
+  # It's a good idea to limit the scope of the token to your own domain, to prevent others from using it.
+  # MAPBOX_TOKEN=<YOUR TOKEN HERE>
+
+  # Optional: If you are using Samba/CIFS-Share and experience problems with "directory not found"
+  # Enable the following Godebug
+  # GODEBUG=asyncpreemptoff=1
+
+service:
+  port:
+    port: 4001
+
+ingress:
+  enabled: false
+
+persistence:
+  config:
+    enabled: false
+    emptyDir:
+      enabled: false
+    mountPath: /config
+  photos:
+    enabled: false
+    emptyDir:
+      enabled: false
+    mountPath: /photos
+  cache:
+    enabled: false
+    emptyDir:
+      enabled: false
+    mountPath: /app/cache
+
+# Enabled mariadb
+# ... for more options see https://github.com/bitnami/charts/tree/master/bitnami/mariadb
+mariadb:
+  enabled: false
+  architecture: standalone
+  auth:
+    database: photoview
+    username: photoview
+    password: photoview-pass
+    rootPassword: photoview-rootpass
+  primary:
+    persistence:
+      enabled: false
+
+# Enabled postgres
+# ... for more options see https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+postgresql:
+  enabled: false
+  postgresqlUsername: photoview
+  postgresqlPassword: photoview-pass
+  postgresqlDatabase: photoview
+  persistence:
+    enabled: false
+
