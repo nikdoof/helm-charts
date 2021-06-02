@@ -35,7 +35,7 @@ env:
 
 service:
   port:
-    port: 4001
+    port: 80
 
 ingress:
   enabled: false
