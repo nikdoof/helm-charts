@@ -11,8 +11,8 @@ sources:
   - https://github.com/photoview/photoview
   - https://hub.docker.com/viktorstrate/photoview
 maintainers:
-  - name: Andrew Williams
-    url: https://github.com/nikdoof/
+  - name: nikdoof
+    email: andy@tensixtyone.com
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
