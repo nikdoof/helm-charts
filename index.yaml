@@ -391,6 +391,25 @@ entries:
     version: 0.1.0
   zigbee2mqttassistant:
   - apiVersion: v1
+    appVersion: 0.3.178
+    created: "2021-07-02T15:38:40.986658475Z"
+    description: A web GUI for Zigbee2Mqtt
+    digest: 09a725b15d36794e2cc11e66dd86d5c9d1727424214faa387203695c8cc1d317
+    home: https://github.com/yllibed/Zigbee2MqttAssistant
+    keywords:
+    - zigbee
+    - mqtt
+    - homeassistant
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: zigbee2mqttassistant
+    sources:
+    - https://hub.docker.com/r/carldebilly/zigbee2mqttassistant
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.1/zigbee2mqttassistant-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
     appVersion: 0.3.165
     created: "2020-05-24T10:08:03.489079052Z"
     description: A web GUI for Zigbee2Mqtt
@@ -409,4 +428,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-07-02T13:09:58.2428787Z"
+generated: "2021-07-02T15:38:40.986708379Z"
