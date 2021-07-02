@@ -45,8 +45,8 @@ config:
   Domain: ".lab"
   RemoveHostDomainName: false
   Interval: 60
-  VCenters: {}
-  InfluxDB: {}
+  VCenters: []
+  InfluxDB: []
   Metrics:
   - ObjectType:
     - VirtualMachine
