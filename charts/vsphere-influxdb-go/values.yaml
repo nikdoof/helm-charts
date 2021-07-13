@@ -42,7 +42,7 @@ cronjob:
 ## add them.
 ##
 config:
-  Domain: ".lab"
+  Domain: ""
   RemoveHostDomainName: false
   Interval: 60
   VCenters: []
