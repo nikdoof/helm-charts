@@ -318,6 +318,27 @@ entries:
   vsphere-influxdb-go:
   - apiVersion: v1
     appVersion: 0.8.5
+    created: "2021-07-13T09:57:50.531054793Z"
+    description: Collect VMware vCenter and ESXi performance metrics and send them
+      to InfluxDB
+    digest: 09fcc2d998e285aa039141cfbeaff209a752b12cd22e6fa586db350b57114ecf
+    home: https://github.com/Oxalide/vsphere-influxdb-go
+    keywords:
+    - vsphere
+    - influxdb
+    - esx
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vsphere-influxdb-go
+    sources:
+    - https://hub.docker.com/r/nikdoof/vsphere-influxdb-go/
+    - https://github.com/janeczku/calibre-web
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vsphere-influxdb-go-0.2.2/vsphere-influxdb-go-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v1
+    appVersion: 0.8.5
     created: "2021-07-02T13:09:58.2428207Z"
     description: Collect VMware vCenter and ESXi performance metrics and send them
       to InfluxDB
@@ -428,4 +449,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-07-02T15:38:40.986708379Z"
+generated: "2021-07-13T09:57:50.531290797Z"
