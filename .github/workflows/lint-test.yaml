@@ -32,7 +32,7 @@ jobs:
           fi
 
       - name: Run chart-testing (lint)
-        run: ct lint
+        run: ct lint --config .github/ct.yaml
 
       - name: Create k3d cluster
         uses: nolar/setup-k3d-k3s@v1
@@ -45,5 +45,5 @@ jobs:
           kubectl taint --all=true nodes node.cloudprovider.kubernetes.io/uninitialized- || true
 
       - name: Run chart-testing (install)
-        run: ct install --config ct.yaml
+        run: ct install --config github/ct.yaml
         if: steps.list-changed.outputs.changed == 'true'
