@@ -242,6 +242,28 @@ entries:
     - https://github.com/nikdoof/helm-charts/releases/download/deluge-1.1.0/deluge-1.1.0.tgz
     version: 1.1.0
   idrac6:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2021-12-04T20:17:22.164787251Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: iDRAC 6 web interface and VNC proxy
+    digest: d78d1e8bf6bd3bb82c353d0344d69835856f5ba9849c61a3682e0e69ed2480b3
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/idrac6/
+    keywords:
+    - idrac6
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: idrac6
+    sources:
+    - https://github.com/DomiStyle/docker-idrac6
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/idrac6-1.0.0/idrac6-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v1
     appVersion: "0.5"
     created: "2021-05-21T11:31:49.765804095Z"
@@ -449,4 +471,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-07-13T09:57:50.531290797Z"
+generated: "2021-12-04T20:17:22.164862552Z"
