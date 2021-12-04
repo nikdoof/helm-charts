@@ -1,14 +1,18 @@
-apiVersion: v1
-appVersion: '0.5'
+apiVersion: v2
+appVersion: "0.5.0"
 description: iDRAC 6 web interface and VNC proxy
 name: idrac6
-version: 0.0.2
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
 keywords:
-  - dell
-  - idrac
-home: https://github.com/DomiStyle/docker-idrac6
+  - idrac6
+home: https://github.com/nikdoof/helm-charts/tree/master/charts/idrac6/
 sources:
-  - https://hub.docker.com/r/linuxserver/calibre-web/
+  - https://github.com/DomiStyle/docker-idrac6
 maintainers:
   - name: nikdoof
     email: andy@tensixtyone.com
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.2.0

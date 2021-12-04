@@ -1,5 +1,0 @@
----
-idrac:
-  host: test
-  username: root
-  password: calvin
