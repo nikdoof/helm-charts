@@ -45,5 +45,5 @@ jobs:
           kubectl taint --all=true nodes node.cloudprovider.kubernetes.io/uninitialized- || true
 
       - name: Run chart-testing (install)
-        run: ct install --chart-dirs charts/ --debug
+        run: ct install --config ct.yaml
         if: steps.list-changed.outputs.changed == 'true'
