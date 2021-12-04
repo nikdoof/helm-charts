@@ -1,5 +1,3 @@
 ---
-idrac:
-  host: test
-  username: root
-  password: calvin
+env:
+  IDRAC_HOST: test

@@ -11,10 +11,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Helm
+      - name: Install Helm
         uses: azure/setup-helm@v1
         with:
-          version: v3.4.0
+          version: v3.6.3
 
       - uses: actions/setup-python@v2
         with:
@@ -32,11 +32,18 @@ jobs:
           fi
 
       - name: Run chart-testing (lint)
-        run: ct lint
+        run: ct lint --config .github/ct.yaml
 
-      - name: Create kind cluster
-        uses: helm/kind-action@v1.2.0
+      - name: Create k3d cluster
+        uses: nolar/setup-k3d-k3s@v1
+        with:
+          version: v1.19
         if: steps.list-changed.outputs.changed == 'true'
 
+      - name: Remove node taints
+        run: |
+          kubectl taint --all=true nodes node.cloudprovider.kubernetes.io/uninitialized- || true
+
       - name: Run chart-testing (install)
-        run: ct install
+        run: ct install --config .github/ct.yaml
+        if: steps.list-changed.outputs.changed == 'true'
