@@ -23,9 +23,9 @@ You can then run `helm search nikdoof` to see the charts.
 See [charts folder](./charts) for a complete list.
 
 * [aaisp2mqtt](./charts/aaisp2mqtt) - A tool to pull information from [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API and output to MQTT
-* [calibre-web](./charts/calibre-web) - Web app for browsing, reading and downloading eBooks stored in a Calibre database
-* [deluge](./charts/deluge) - Deluge torrent client
-
+* [idrac6](./charts/idrac6) - A VNC/Web UI container to wrap around the outdated Java/KVM solution in Dell iDRAC6, and make it HTML5.
+* [vsphere-influxdb-go](./charts/vsphere-influxdb-go) - A vSphere statistics exporter that outputs to InfluxDB.
+* [zigbee2mqttassistant](./charts/zigbee2mqttassistant) - A WebUI for Zigbee2MQTT
 
 ## License
 
