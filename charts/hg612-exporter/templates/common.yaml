@@ -1,0 +1,15 @@
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the hardcoded settings */}}
+{{- define "hg612-exporter.harcodedValues" -}}
+command: app
+args:
+  - "--host {{ .Values.modem.host }}"
+  - "--identifier {{ .Values.modem.identifier }}"
+  - "--interval {{.Values.modem.interval }}"
+{{- end -}}
+{{- $_ := mergeOverwrite .Values (include "hg612-exporter.harcodedValues" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "common.all" . }}
