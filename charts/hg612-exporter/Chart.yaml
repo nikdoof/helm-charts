@@ -1,0 +1,18 @@
+apiVersion: v2
+appVersion: 1.0.0
+description: A prometheus exporter for the HG612 modem
+name: hg612-exporter
+version: 0.0.1
+kubeVersion: ">=1.16.0-0"
+keywords:
+- hg612-exporter
+home: https://github.com/nikdoof/helm-charts/tree/master/charts/hg612-exporter
+sources:
+- https://github.com/nikdoof/hg612-exporter-docker
+maintainers:
+- name: nikdoof
+  email: andy@tensixtyone.com
+dependencies:
+- name: common
+  repository: https://library-charts.k8s-at-home.com
+  version: 4.2.0

@@ -1,0 +1,4 @@
+---
+modem:
+  host: test
+  identifier: test
