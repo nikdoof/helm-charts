@@ -41,7 +41,7 @@ modem:
   # -- DNS name or IP of the HG612 modem.
   host:
   # -- Identifier to use in Prometheus for this modem.
-  identifier: {{ include "common.names.fullname" . }}
+  identifier:
   # -- How often to collect statistics from the modem.
   interval: 10
 
