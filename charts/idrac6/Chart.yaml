@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: "0.5.0"
 description: iDRAC 6 web interface and VNC proxy
 name: idrac6
-version: 1.0.0
+version: 1.0.1
 kubeVersion: ">=1.16.0-0"
 keywords:
   - idrac6
