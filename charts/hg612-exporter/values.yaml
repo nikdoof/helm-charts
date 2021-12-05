@@ -7,9 +7,9 @@
 
 image:
   # -- image repository
-  repository: quay.io/jakekeeys/hg612-exporter
+  repository: nikdoof/hg612-exporter
   # -- image tag
-  tag: latest
+  tag: 0.0.1
   # -- image pull policy
   pullPolicy: IfNotPresent
 
