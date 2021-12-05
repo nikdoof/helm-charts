@@ -3,11 +3,11 @@
 
 {{/* Append the hardcoded settings */}}
 {{- define "hg612-exporter.harcodedValues" -}}
-command: app
+command: ./app
 args:
-  - "--host {{ .Values.modem.host }}"
-  - "--identifier {{ .Values.modem.identifier }}"
-  - "--interval {{.Values.modem.interval }}"
+  - "--host={{ .Values.modem.host }}"
+  - "--identifier={{ .Values.modem.identifier }}"
+  - "--interval={{.Values.modem.interval }}"
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "hg612-exporter.harcodedValues" . | fromYaml) -}}
 
