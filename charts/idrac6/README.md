@@ -1,6 +1,6 @@
 # idrac6
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![AppVersion: 0.5.0](https://img.shields.io/badge/AppVersion-0.5.0-informational?style=flat-square)
+![Version: 1.0.1](https://img.shields.io/badge/Version-1.0.1-informational?style=flat-square) ![AppVersion: 0.5.0](https://img.shields.io/badge/AppVersion-0.5.0-informational?style=flat-square)
 
 iDRAC 6 web interface and VNC proxy
 
@@ -76,11 +76,8 @@ N/A
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | env | object | See below | environment variables. See more environment variables in the [idrac6 documentation](https://github.com/DomiStyle/docker-idrac6). |
-| env.IDRAC_HOST | string | `nil` | iDRAC hostname to connect to |
 | env.IDRAC_KEYCODE_HACK | string | `"false"` | Enable keycode hack |
-| env.IDRAC_PASSWORD | string | `"calvin"` | iDRAC password to use |
-| env.IDRAC_PORT | int | `443` | iDRAC HTTP port |
-| env.IDRAC_USER | string | `"root"` | iDRAC Username to use |
+| env.IDRAC_PORT | int | `443` | iDRAC hostname to connect to -- iDRAC Username to use -- iDRAC password to use -- iDRAC HTTP port |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"domistyle/idrac6"` | image repository |
 | image.tag | string | `"v0.5"` | image tag |
@@ -96,6 +93,20 @@ N/A
 All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common#changelog).
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [1.0.1]
+
+#### Added
+
+- N/A
+
+#### Changed
+
+- Remove default Env values to allow for better overriding with secrets.
+
+#### Removed
+
+- N/A
 
 ### [1.0.0]
 

@@ -17,11 +17,11 @@ image:
 # @default -- See below
 env:
   # -- iDRAC hostname to connect to
-  IDRAC_HOST:
+  #IDRAC_HOST:
   # -- iDRAC Username to use
-  IDRAC_USER: root
+  #IDRAC_USER: root
   # -- iDRAC password to use
-  IDRAC_PASSWORD: calvin
+  #IDRAC_PASSWORD: calvin
   # -- iDRAC HTTP port
   IDRAC_PORT: 443
   # -- Enable keycode hack
