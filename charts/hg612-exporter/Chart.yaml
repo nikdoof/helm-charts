@@ -10,7 +10,7 @@ home: https://github.com/nikdoof/helm-charts/tree/master/charts/hg612-exporter
 sources:
 - https://github.com/nikdoof/hg612-exporter-docker
 maintainers:
-- name: Andrew Williams
+- name: nikdoof
   email: andy@tensixtyone.com
 dependencies:
 - name: common
