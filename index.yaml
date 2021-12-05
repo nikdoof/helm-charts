@@ -244,6 +244,28 @@ entries:
   idrac6:
   - apiVersion: v2
     appVersion: 0.5.0
+    created: "2021-12-05T06:32:15.586858366Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: iDRAC 6 web interface and VNC proxy
+    digest: 75b26ffcd800184619de08d8a5e80fa215829c6cf13db59906d9c53a5dc42d24
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/idrac6/
+    keywords:
+    - idrac6
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: idrac6
+    sources:
+    - https://github.com/DomiStyle/docker-idrac6
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/idrac6-1.0.1/idrac6-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 0.5.0
     created: "2021-12-04T20:17:22.164787251Z"
     dependencies:
     - name: common
@@ -471,4 +493,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-04T20:17:22.164862552Z"
+generated: "2021-12-05T06:32:15.586913766Z"
