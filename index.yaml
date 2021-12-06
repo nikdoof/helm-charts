@@ -1,5 +1,28 @@
 apiVersion: v1
 entries:
+  aaisp-exporter:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2021-12-06T17:47:14.563574004Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for the aaisp modem
+    digest: 9e926d0439fe43224e8133539530ab27cbfa5ee04fa122b571a7d0a803c32ea4
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/aaisp-exporter
+    keywords:
+    - aaisp-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp-exporter
+    sources:
+    - https://github.com/nikdoof/aaisp-exporter-docker
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-exporter-0.0.2/aaisp-exporter-0.0.2.tgz
+    version: 0.0.2
   aaisp-to-mqtt:
   - apiVersion: v1
     appVersion: "0.2"
@@ -538,4 +561,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-05T09:12:35.786066494Z"
+generated: "2021-12-06T17:47:14.563646105Z"
