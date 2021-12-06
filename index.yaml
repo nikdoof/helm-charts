@@ -2,6 +2,28 @@ apiVersion: v1
 entries:
   aaisp-exporter:
   - apiVersion: v2
+    appVersion: 0.2.1
+    created: "2021-12-06T17:48:38.615277976Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for the Andrew & Arnold CHAOS API
+    digest: 221818bc84d864a26e69b678746d56e022f376dd3040439a1c9ef7a89249b77e
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/aaisp-exporter
+    keywords:
+    - aaisp-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp-exporter
+    sources:
+    - https://github.com/nikdoof/aaisp-chaos
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-exporter-0.1.0/aaisp-exporter-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v2
     appVersion: 0.0.1
     created: "2021-12-06T17:47:14.563574004Z"
     dependencies:
@@ -561,4 +583,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-06T17:47:14.563646105Z"
+generated: "2021-12-06T17:48:38.615336077Z"
