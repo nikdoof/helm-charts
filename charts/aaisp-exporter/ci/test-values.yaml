@@ -1,0 +1,4 @@
+---
+env:
+  CHAOS_CONTROL_LOGIN: test
+  CHAOS_CONTROL_PASSWORD: test

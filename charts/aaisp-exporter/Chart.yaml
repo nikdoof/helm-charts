@@ -1,0 +1,18 @@
+apiVersion: v2
+appVersion: 0.0.1
+description: A prometheus exporter for the aaisp modem
+name: aaisp-exporter
+version: 0.0.2
+kubeVersion: ">=1.16.0-0"
+keywords:
+- aaisp-exporter
+home: https://github.com/nikdoof/helm-charts/tree/master/charts/aaisp-exporter
+sources:
+- https://github.com/nikdoof/aaisp-exporter-docker
+maintainers:
+- name: nikdoof
+  email: andy@tensixtyone.com
+dependencies:
+- name: common
+  repository: https://library-charts.k8s-at-home.com
+  version: 4.2.0
