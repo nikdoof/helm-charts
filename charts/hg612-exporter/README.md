@@ -1,6 +1,6 @@
 # hg612-exporter
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![AppVersion: 1.0.0](https://img.shields.io/badge/AppVersion-1.0.0-informational?style=flat-square)
+![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![AppVersion: 0.0.1](https://img.shields.io/badge/AppVersion-0.0.1-informational?style=flat-square)
 
 A prometheus exporter for the HG612 modem
 
@@ -78,7 +78,7 @@ N/A
 | env | object | See below | environment variables. See more environment variables in the [hg612-exporter documentation](https://hg612-exporter.org/docs). |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"nikdoof/hg612-exporter"` | image repository |
-| image.tag | string | `"latest"` | image tag |
+| image.tag | string | `"0.0.1"` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | metrics.enabled | bool | See values.yaml | Enable and configure a Prometheus serviceMonitor for the chart under this key. |
 | metrics.prometheusRule | object | See values.yaml | Enable and configure Prometheus Rules for the chart under this key. |
@@ -88,7 +88,7 @@ N/A
 | metrics.serviceMonitor.scrapeTimeout | string | `"30s"` |  |
 | modem | object | See below | Modem configuration details |
 | modem.host | string | `nil` | DNS name or IP of the HG612 modem. |
-| modem.identifier | object | `{"":null}` | Identifier to use in Prometheus for this modem. |
+| modem.identifier | string | `nil` | Identifier to use in Prometheus for this modem. |
 | modem.interval | int | `10` | How often to collect statistics from the modem. |
 | service | object | See values.yaml | Configures service settings for the chart. |
 

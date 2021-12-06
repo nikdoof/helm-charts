@@ -77,7 +77,7 @@ N/A
 |-----|------|---------|-------------|
 | env | object | See below | environment variables. See more environment variables in the [idrac6 documentation](https://github.com/DomiStyle/docker-idrac6). |
 | env.IDRAC_KEYCODE_HACK | string | `"false"` | Enable keycode hack |
-| env.IDRAC_PORT | int | `443` | iDRAC hostname to connect to -- iDRAC Username to use -- iDRAC password to use -- iDRAC HTTP port |
+| env.IDRAC_PORT | int | `443` | iDRAC hostname to connect to IDRAC_HOST: -- iDRAC Username to use IDRAC_USER: root -- iDRAC password to use IDRAC_PASSWORD: calvin -- iDRAC HTTP port |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"domistyle/idrac6"` | image repository |
 | image.tag | string | `"v0.5"` | image tag |
