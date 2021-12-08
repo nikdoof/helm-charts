@@ -3,6 +3,28 @@ entries:
   aaisp-exporter:
   - apiVersion: v2
     appVersion: 0.2.1
+    created: "2021-12-08T16:32:19.202727465Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for the Andrew & Arnold CHAOS API
+    digest: a73177f62b45fd4700b4cc5918e38ab1749346afa3efdc9f1382838c8bee8f6b
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/aaisp-exporter
+    keywords:
+    - aaisp-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp-exporter
+    sources:
+    - https://github.com/nikdoof/aaisp-chaos
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-exporter-0.1.1/aaisp-exporter-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.2.1
     created: "2021-12-06T17:48:38.615277976Z"
     dependencies:
     - name: common
@@ -129,6 +151,25 @@ entries:
     - https://github.com/nikdoof/helm-charts/releases/download/aaisp-to-mqtt-0.1.0/aaisp-to-mqtt-0.1.0.tgz
     version: 0.1.0
   aaisp2mqtt:
+  - apiVersion: v1
+    appVersion: 0.3.1
+    created: "2021-12-08T16:32:19.288622094Z"
+    description: Pulls data from the AAISP CHAOSv2 API into MQTT
+    digest: d552af91ee2814f6e8eda8434fa3419a9af8200a05c5987deda5cd0a6888f75a
+    home: https://github.com/nikdoof/aaisp2mqtt
+    keywords:
+    - aaisp
+    - mqtt
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp2mqtt
+    sources:
+    - https://hub.docker.com/r/nikdoof/aaisp2mqtt/
+    - https://github.com/natm/aaisp2mqtt
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp2mqtt-0.3.3/aaisp2mqtt-0.3.3.tgz
+    version: 0.3.3
   - apiVersion: v1
     appVersion: 0.3.1
     created: "2020-10-01T06:21:10.474045878Z"
@@ -289,6 +330,28 @@ entries:
   hg612-exporter:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2021-12-08T16:32:19.38411912Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for the HG612 modem
+    digest: 7ca969103bb92582bb4c606b2d1fcbf8995f6c989d1449bcc27dd6c5dc1223b2
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/hg612-exporter
+    keywords:
+    - hg612-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: hg612-exporter
+    sources:
+    - https://github.com/nikdoof/hg612-exporter-docker
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/hg612-exporter-0.0.3/hg612-exporter-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2021-12-05T09:12:35.785691488Z"
     dependencies:
     - name: common
@@ -332,6 +395,28 @@ entries:
     - https://github.com/nikdoof/helm-charts/releases/download/hg612-exporter-0.0.1/hg612-exporter-0.0.1.tgz
     version: 0.0.1
   idrac6:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2021-12-08T16:32:19.486562896Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: iDRAC 6 web interface and VNC proxy
+    digest: 64ba53bf35e872578846e8cd35c8e2c4e1807772d57a269195a184b0bf1e3e4c
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/idrac6/
+    keywords:
+    - idrac6
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: idrac6
+    sources:
+    - https://github.com/DomiStyle/docker-idrac6
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/idrac6-1.0.2/idrac6-1.0.2.tgz
+    version: 1.0.2
   - apiVersion: v2
     appVersion: 0.5.0
     created: "2021-12-05T06:32:15.586858366Z"
@@ -449,7 +534,52 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/nfs-client-provisioner-1.2.12/nfs-client-provisioner-1.2.12.tgz
     version: 1.2.12
+  plex-exporter:
+  - apiVersion: v2
+    appVersion: 0.2.2
+    created: "2021-12-08T16:32:19.571271814Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for Plex Media Server
+    digest: 68908a3782c6f28ff3a89d0979758a1f28e93a7c044921f302350d0b24802d40
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/plex-exporter
+    keywords:
+    - plex-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: plex-exporter
+    sources:
+    - https://github.com/arnarg/plex_exporter
+    - https://hub.docker.com/r/granra/plex_exporter/
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/plex-exporter-0.0.1/plex-exporter-0.0.1.tgz
+    version: 0.0.1
   vsphere-influxdb-go:
+  - apiVersion: v1
+    appVersion: 0.8.5
+    created: "2021-12-08T16:32:19.650127286Z"
+    description: Collect VMware vCenter and ESXi performance metrics and send them
+      to InfluxDB
+    digest: fded2b818931124f5f075bef183259229ecebfe317ca6e30ea9a24effdb4c5ca
+    home: https://github.com/Oxalide/vsphere-influxdb-go
+    keywords:
+    - vsphere
+    - influxdb
+    - esx
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vsphere-influxdb-go
+    sources:
+    - https://hub.docker.com/r/nikdoof/vsphere-influxdb-go/
+    - https://github.com/janeczku/calibre-web
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vsphere-influxdb-go-0.2.3/vsphere-influxdb-go-0.2.3.tgz
+    version: 0.2.3
   - apiVersion: v1
     appVersion: 0.8.5
     created: "2021-07-13T09:57:50.531054793Z"
@@ -547,6 +677,25 @@ entries:
   zigbee2mqttassistant:
   - apiVersion: v1
     appVersion: 0.3.178
+    created: "2021-12-08T16:32:19.739338525Z"
+    description: A web GUI for Zigbee2Mqtt
+    digest: b632e275d7d43d1d0ae44090600b0f20cd421c18114903b7159a7d48747b5b21
+    home: https://github.com/yllibed/Zigbee2MqttAssistant
+    keywords:
+    - zigbee
+    - mqtt
+    - homeassistant
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: zigbee2mqttassistant
+    sources:
+    - https://hub.docker.com/r/carldebilly/zigbee2mqttassistant
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.2/zigbee2mqttassistant-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: 0.3.178
     created: "2021-07-02T15:38:40.986658475Z"
     description: A web GUI for Zigbee2Mqtt
     digest: 09a725b15d36794e2cc11e66dd86d5c9d1727424214faa387203695c8cc1d317
@@ -583,4 +732,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-06T17:48:38.615336077Z"
+generated: "2021-12-08T16:32:19.739647153Z"
