@@ -1,6 +1,6 @@
 # plex-exporter
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![AppVersion: 0.2.2](https://img.shields.io/badge/AppVersion-0.2.2-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![AppVersion: 0.2.2](https://img.shields.io/badge/AppVersion-0.2.2-informational?style=flat-square)
 
 A prometheus exporter for Plex Media Server
 
@@ -97,6 +97,34 @@ Your Plex token can either be passed as a value in values.yml, or you can provid
 All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common#changelog).
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [0.0.3]
+
+#### Added
+
+- N/A
+
+#### Changed
+
+- Fixed autodiscovery configuration issues when using `envFrom`
+
+#### Removed
+
+- N/A
+
+### [0.0.2]
+
+#### Added
+
+- Support for auto discovery
+
+#### Changed
+
+- N/A
+
+#### Removed
+
+- N/A
 
 ### [0.0.1]
 
