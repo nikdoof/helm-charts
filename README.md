@@ -26,8 +26,9 @@ See [charts folder](./charts) for a complete list.
 * [idrac6](./charts/idrac6) - A VNC/Web UI container to wrap around the outdated Java/KVM solution in Dell iDRAC6, and make it HTML5.
 * [vsphere-influxdb-go](./charts/vsphere-influxdb-go) - A vSphere statistics exporter that outputs to InfluxDB.
 * [zigbee2mqttassistant](./charts/zigbee2mqttassistant) - A WebUI for Zigbee2MQTT.
-* [hg612-exporter] - A Prometheus exporter for HG612 xDSL Modems.
-* [aaisp-exporter] - A Prometheus exporter for [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API.
+* [hg612-exporter](./charts/hg612-exporter) - A Prometheus exporter for HG612 xDSL Modems.
+* [aaisp-exporter](./charts/aaisp-exporter) - A Prometheus exporter for [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API.
+* [plex-exporter](./charts/plex-exporter) - A Prometheus exporter for Plex Media Server
 
 ## License
 

@@ -1,14 +1,14 @@
 # aaisp-exporter
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![AppVersion: 0.0.1](https://img.shields.io/badge/AppVersion-0.0.1-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![AppVersion: 0.2.1](https://img.shields.io/badge/AppVersion-0.2.1-informational?style=flat-square)
 
-A prometheus exporter for the aaisp modem
+A prometheus exporter for the Andrew & Arnold CHAOS API
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/nikdoof/helm-charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/nikdoof/aaisp-exporter-docker>
+* <https://github.com/nikdoof/aaisp-chaos>
 
 ## Requirements
 
