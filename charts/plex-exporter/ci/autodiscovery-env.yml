@@ -1,4 +1,5 @@
 ---
+env:
+  PLEX_TOKEN: a0a0a0a0a
 plex:
   autodiscover: true
-  token: a0a0a0a0a0
