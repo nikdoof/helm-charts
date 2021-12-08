@@ -4,8 +4,16 @@
 {{/* Append the hardcoded settings */}}
 {{- define "plex-exporter.harcodedValues" -}}
 args:
+  {{- if .Values.plex.autodiscover -}}
+  - "--auto-discover"
+  {{- else -}}
   - "--plex-server"
   - "{{ .Values.plex.server }}"
+  {{- end -}}
+  {{- if .Values.plex.token -}}
+  - "--token"
+  - "{{ .Values.plex.token }}"
+  {{- end -}}
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "plex-exporter.harcodedValues" . | fromYaml) -}}
 

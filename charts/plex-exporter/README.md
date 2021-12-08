@@ -1,6 +1,6 @@
 # plex-exporter
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![AppVersion: 0.2.2](https://img.shields.io/badge/AppVersion-0.2.2-informational?style=flat-square)
+![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![AppVersion: 0.2.2](https://img.shields.io/badge/AppVersion-0.2.2-informational?style=flat-square)
 
 A prometheus exporter for Plex Media Server
 
@@ -56,7 +56,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 
 ```console
 helm install plex-exporter \
-  --set plex.server="http://192.168.1.1:32400"\
+  --set plex.token="000000"\
     nikdoof-helm-charts/plex-exporter
 ```
 
@@ -68,7 +68,7 @@ helm install plex-exporter nikdoof-helm-charts/plex-exporter -f values.yaml
 
 ## Custom configuration
 
-N/A
+Your Plex token can either be passed as a value in values.yml, or you can provide a environment variable of `PLEX_TOKEN` or `TOKEN` by a method of your choice.
 
 ## Values
 
@@ -87,7 +87,9 @@ N/A
 | metrics.serviceMonitor.interval | string | `"1m"` |  |
 | metrics.serviceMonitor.labels | object | `{}` |  |
 | metrics.serviceMonitor.scrapeTimeout | string | `"30s"` |  |
-| plex.server | string | `nil` | Server address of your Plex server, as a URL, including the port |
+| plex.autodiscover | bool | `true` | Enable autodiscover using plex.tv |
+| plex.server | string | `nil` | Manual server address of your Plex server, as a URL, including the port |
+| plex.token | string | `nil` | Authentication token to connect to your Plex instance |
 | service | object | See values.yaml | Configures service settings for the chart. |
 
 ## Changelog
