@@ -1,0 +1,13 @@
+{{/* Make sure all variables are set properly */}}
+{{- include "common.values.setup" . }}
+
+{{/* Append the hardcoded settings */}}
+{{- define "plex-exporter.harcodedValues" -}}
+args:
+  - "--plex-server"
+  - "{{ .Values.plex.server }}"
+{{- end -}}
+{{- $_ := mergeOverwrite .Values (include "plex-exporter.harcodedValues" . | fromYaml) -}}
+
+{{/* Render the templates */}}
+{{ include "common.all" . }}
