@@ -36,8 +36,12 @@ ingress:
     enabled: false
 
 plex:
-  # -- Server address of your Plex server, as a URL, including the port
+  # -- Manual server address of your Plex server, as a URL, including the port
   server:
+  # -- Authentication token to connect to your Plex instance
+  token:
+  # -- Enable autodiscover using plex.tv
+  autodiscover: true
 
 metrics:
   # -- Enable and configure a Prometheus serviceMonitor for the chart under this key.

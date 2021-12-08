@@ -1,0 +1,5 @@
+---
+plex:
+  autodiscovery: false
+  server: http://test:32400
+  token: a0a0a0a0a0

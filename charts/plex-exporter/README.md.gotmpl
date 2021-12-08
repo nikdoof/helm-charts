@@ -76,7 +76,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 
 ```console
 helm install {{ template "chart.name" . }} \
-  --set plex.server="http://192.168.1.1:32400"\
+  --set plex.token="000000"\
     {{ template "custom.helm.path" . }}
 ```
 {{- end -}}
