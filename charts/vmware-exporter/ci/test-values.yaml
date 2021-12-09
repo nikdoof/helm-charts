@@ -1,0 +1,5 @@
+---
+env:
+  VSPHERE_USER: administrator@vsphere.my.domain.com
+  VSPHERE_PASSWORD: Secure-Pass
+  VSPHERE_HOST: test

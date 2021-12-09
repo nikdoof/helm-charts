@@ -28,7 +28,8 @@ See [charts folder](./charts) for a complete list.
 * [zigbee2mqttassistant](./charts/zigbee2mqttassistant) - A WebUI for Zigbee2MQTT.
 * [hg612-exporter](./charts/hg612-exporter) - A Prometheus exporter for HG612 xDSL Modems.
 * [aaisp-exporter](./charts/aaisp-exporter) - A Prometheus exporter for [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API.
-* [plex-exporter](./charts/plex-exporter) - A Prometheus exporter for Plex Media Server
+* [plex-exporter](./charts/plex-exporter) - A Prometheus exporter for Plex Media Server.
+* [vmware-exporter](./charts/vmware-exporter) - A Prometheus exporter for VMware vSphere.
 
 ## License
 
