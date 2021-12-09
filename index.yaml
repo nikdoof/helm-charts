@@ -604,6 +604,30 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/plex-exporter-0.0.1/plex-exporter-0.0.1.tgz
     version: 0.0.1
+  vmware-exporter:
+  - apiVersion: v2
+    appVersion: 0.18.2
+    created: "2021-12-09T11:29:41.070914676Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for vSphere vCenter
+    digest: cbd503dfe0196441962dc8f741afc36f01a26d74ac07985483de5ac7d912170b
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/vmware-exporter
+    keywords:
+    - vmware-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vmware-exporter
+    sources:
+    - https://github.com/pryorda/vmware_exporter
+    - https://hub.docker.com/r/pryorda/vmware_exporter/tags
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vmware-exporter-0.0.1/vmware-exporter-0.0.1.tgz
+    version: 0.0.1
   vsphere-influxdb-go:
   - apiVersion: v1
     appVersion: 0.8.5
@@ -778,4 +802,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-08T17:24:01.375304385Z"
+generated: "2021-12-09T11:29:41.071008677Z"
