@@ -7,9 +7,9 @@
 
 image:
   # -- image repository
-  repository: nikdoof/hg612-exporter
+  repository: ghcr.io/nikdoof/hg612-exporter
   # -- image tag
-  tag: 0.0.1
+  tag: 0.1.2
   # -- image pull policy
   pullPolicy: IfNotPresent
 

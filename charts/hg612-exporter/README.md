@@ -1,6 +1,6 @@
 # hg612-exporter
 
-![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![AppVersion: 0.0.1](https://img.shields.io/badge/AppVersion-0.0.1-informational?style=flat-square)
+![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square) ![AppVersion: 0.1.2](https://img.shields.io/badge/AppVersion-0.1.2-informational?style=flat-square)
 
 A prometheus exporter for the HG612 modem
 
@@ -8,7 +8,7 @@ A prometheus exporter for the HG612 modem
 
 ## Source Code
 
-* <https://github.com/nikdoof/hg612-exporter-docker>
+* <https://github.com/nikdoof/hg612-exporter>
 
 ## Requirements
 
@@ -77,8 +77,8 @@ N/A
 |-----|------|---------|-------------|
 | env | object | See below | environment variables. See more environment variables in the [hg612-exporter documentation](https://hg612-exporter.org/docs). |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
-| image.repository | string | `"nikdoof/hg612-exporter"` | image repository |
-| image.tag | string | `"0.0.1"` | image tag |
+| image.repository | string | `"ghcr.io/nikdoof/hg612-exporter"` | image repository |
+| image.tag | string | `"0.1.2"` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
 | metrics.dashboards | object | See values.yaml | Enable and configure Grafana dashboard ConfigMaps for the chart under this key. |
 | metrics.dashboards.namespace | string | `nil` | Namespace to create the dashboards ConfigMap under. |
@@ -99,6 +99,20 @@ N/A
 All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common#changelog).
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [1.1.1]
+
+#### Added
+
+- N/A
+
+#### Changed
+
+- Bumped to app version 0.1.2
+
+#### Removed
+
+- N/A
 
 ### [1.1.0]
 
