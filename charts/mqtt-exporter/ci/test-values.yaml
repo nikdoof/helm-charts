@@ -1,5 +1,4 @@
 ---
 env:
   MQTT_ADDRESS: mqtt.local
-metrics:
-  enabled: true
+

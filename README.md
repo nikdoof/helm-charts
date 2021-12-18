@@ -30,6 +30,7 @@ See [charts folder](./charts) for a complete list.
 * [aaisp-exporter](./charts/aaisp-exporter) - A Prometheus exporter for [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API.
 * [plex-exporter](./charts/plex-exporter) - A Prometheus exporter for Plex Media Server.
 * [vmware-exporter](./charts/vmware-exporter) - A Prometheus exporter for VMware vSphere.
+* [mqtt-exporter](./charts/mqtt-exporter) - A generic Prometheus exporter for MQTT data.
 
 ## License
 
