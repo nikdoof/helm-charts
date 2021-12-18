@@ -21,8 +21,7 @@
     "editable": true,
     "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": 34,
-    "iteration": 1639831202787,
+    "iteration": 1639834876425,
     "links": [],
     "liveNow": false,
     "panels": [
@@ -92,7 +91,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "dsl_status{host=\"$host\"}",
+                    "expr": "avg by (host) (dsl_status{host=\"$host\"})",
                     "interval": "",
                     "legendFormat": "",
                     "refId": "A"
@@ -151,7 +150,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "dsl_down_current_rate",
+                    "expr": "avg by (host) (dsl_down_current_rate{host=\"$host\"})",
                     "interval": "",
                     "legendFormat": "Downstream",
                     "refId": "A"
@@ -162,7 +161,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "dsl_up_current_rate",
+                    "expr": "avg by (host) (dsl_up_current_rate{host=\"$host\"})",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "Upstream",
@@ -261,7 +260,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "dsl_down_current_rate{host=\"$host\"}",
+                    "expr": "avg by (host) (dsl_down_current_rate{host=\"$host\"})",
                     "interval": "",
                     "legendFormat": "Down",
                     "refId": "A"
@@ -272,7 +271,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "dsl_down_max_rate{host=\"$host\"}",
+                    "expr": "avg by (host) (dsl_down_max_rate{host=\"$host\"})",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "Max Attainable",
@@ -284,7 +283,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "dsl_up_current_rate{host=\"$host\"} * -1",
+                    "expr": "avg by (host) (dsl_up_current_rate{host=\"$host\"}) * -1",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "Up",
@@ -296,7 +295,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "dsl_up_max_rate{host=\"$host\"} * -1",
+                    "expr": "avg by (host) (dsl_up_max_rate{host=\"$host\"}) * -1",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "Max Attainable",
@@ -381,7 +380,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "increase(dsl_down_crc{host=\"$host\"}[$__rate_interval]) * -1",
+                    "expr": "sum by (host) (increase(dsl_down_crc{host=\"$host\"}[$__rate_interval])) * -1",
                     "interval": "",
                     "legendFormat": "CRC Down",
                     "refId": "A"
@@ -392,7 +391,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "increase(dsl_up_crc{host=\"$host\"}[$__rate_interval])",
+                    "expr": "sum by (host) (increase(dsl_up_crc{host=\"$host\"}[$__rate_interval]))",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "CRC Up",
@@ -404,7 +403,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "increase(dsl_down_fec{host=\"$host\"}[$__rate_interval]) * -1",
+                    "expr": "sum by (host) (increase(dsl_down_fec{host=\"$host\"}[$__rate_interval])) * -1",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "FEC Down",
@@ -416,7 +415,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "increase(dsl_up_fec{host=\"$host\"}[$__rate_interval])",
+                    "expr": "sum by (host) (increase(dsl_up_fec{host=\"$host\"}[$__rate_interval]))",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "FEC Up",
@@ -428,7 +427,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "increase(dsl_down_hec{host=\"$host\"}[$__rate_interval]) * -1",
+                    "expr": "sum by (host) (increase(dsl_down_hec{host=\"$host\"}[$__rate_interval])) * -1",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "HEC Down",
@@ -440,7 +439,7 @@
                         "uid": "PBFA97CFB590B2093"
                     },
                     "exemplar": true,
-                    "expr": "increase(dsl_up_hec{host=\"$host\"}[$__rate_interval])",
+                    "expr": "sum by (host) (increase(dsl_up_hec{host=\"$host\"}[$__rate_interval]))",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "HEC Up",
@@ -491,6 +490,6 @@
     "timezone": "",
     "title": "HG612",
     "uid": "42KBhvTnz",
-    "version": 8,
+    "version": 9,
     "weekStart": ""
 }
