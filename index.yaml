@@ -585,6 +585,29 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/idrac6-0.0.1/idrac6-0.0.1.tgz
     version: 0.0.1
+  mqtt-exporter:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-12-18T18:01:58.011734587Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for generic MQTT metrics
+    digest: 4f95e6b6661aaea8c363adae327590acee9e89b1f04c4278d3761b60091c1215
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/mqtt-exporter
+    keywords:
+    - mqtt-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: mqtt-exporter
+    sources:
+    - https://github.com/kpetremann/mqtt-exporter
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/mqtt-exporter-1.0.0/mqtt-exporter-1.0.0.tgz
+    version: 1.0.0
   nfs-client-provisioner:
   - apiVersion: v1
     appVersion: 3.1.0
@@ -936,4 +959,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-18T13:47:16.954041279Z"
+generated: "2021-12-18T18:01:58.011832288Z"
