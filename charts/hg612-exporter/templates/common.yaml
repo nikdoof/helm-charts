@@ -3,7 +3,6 @@
 
 {{/* Append the hardcoded settings */}}
 {{- define "hg612-exporter.harcodedValues" -}}
-command: ./app
 args:
   - "--host={{ .Values.modem.host }}"
   - "--identifier={{ .Values.modem.identifier }}"
