@@ -330,6 +330,28 @@ entries:
   hg612-exporter:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2021-12-18T12:58:47.557128477Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for the HG612 modem
+    digest: e7d4d7d496bead7f6ee9cb98c4290b2fe9acc1b14f5c9c35069ea4ddbff80620
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/hg612-exporter
+    keywords:
+    - hg612-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: hg612-exporter
+    sources:
+    - https://github.com/nikdoof/hg612-exporter
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/hg612-exporter-1.1.0/hg612-exporter-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2021-12-08T16:32:19.38411912Z"
     dependencies:
     - name: common
@@ -848,4 +870,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-18T12:26:52.153472321Z"
+generated: "2021-12-18T12:58:47.557228477Z"
