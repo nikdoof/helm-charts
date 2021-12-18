@@ -70,3 +70,12 @@ metrics:
       #   for: 5m
       #   labels:
       #     severity: critical
+  # -- Enable and configure Grafana dashboard ConfigMaps for the chart under this key.
+  # @default -- See values.yaml
+  dashboards:
+    create: false
+    # -- Namespace to create the dashboards ConfigMap under.
+    # @default -- The release's namespace
+    namespace:
+    labels:
+      grafana_dashboard: "true"

@@ -2,3 +2,7 @@
 modem:
   host: test
   identifier: test
+metrics:
+  enabled: true
+  dashboards:
+    create: true

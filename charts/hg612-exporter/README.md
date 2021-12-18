@@ -1,6 +1,6 @@
 # hg612-exporter
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![AppVersion: 0.0.1](https://img.shields.io/badge/AppVersion-0.0.1-informational?style=flat-square)
+![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![AppVersion: 0.0.1](https://img.shields.io/badge/AppVersion-0.0.1-informational?style=flat-square)
 
 A prometheus exporter for the HG612 modem
 
@@ -80,6 +80,8 @@ N/A
 | image.repository | string | `"nikdoof/hg612-exporter"` | image repository |
 | image.tag | string | `"0.0.1"` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
+| metrics.dashboards | object | See values.yaml | Enable and configure Grafana dashboard ConfigMaps for the chart under this key. |
+| metrics.dashboards.namespace | string | `nil` | Namespace to create the dashboards ConfigMap under. |
 | metrics.enabled | bool | See values.yaml | Enable and configure a Prometheus serviceMonitor for the chart under this key. |
 | metrics.prometheusRule | object | See values.yaml | Enable and configure Prometheus Rules for the chart under this key. |
 | metrics.prometheusRule.rules | list | See prometheusrules.yaml | Configure additionial rules for the chart under this key. |
@@ -97,6 +99,20 @@ N/A
 All notable changes to this application Helm chart will be documented in this file but does not include changes from our common library. To read those click [here](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common#changelog).
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+### [1.1.0]
+
+#### Added
+
+- Grafana dashboard ConfigMap
+
+#### Changed
+
+- N/A
+
+#### Removed
+
+- N/A
 
 ### [1.0.0]
 
