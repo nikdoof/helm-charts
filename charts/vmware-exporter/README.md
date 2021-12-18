@@ -1,6 +1,6 @@
 # vmware-exporter
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![AppVersion: 0.18.2](https://img.shields.io/badge/AppVersion-0.18.2-informational?style=flat-square)
+![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![AppVersion: 0.18.2](https://img.shields.io/badge/AppVersion-0.18.2-informational?style=flat-square)
 
 A prometheus exporter for vSphere vCenter
 
@@ -81,6 +81,8 @@ N/A
 | image.repository | string | `"pryorda/vmware_exporter"` | image repository |
 | image.tag | string | `"v0.18.2"` | image tag |
 | ingress.main | object | See values.yaml | Enable and configure ingress settings for the chart under this key. |
+| metrics.dashboards | object | See values.yaml | Enable and configure Grafana dashboard ConfigMaps for the chart under this key. |
+| metrics.dashboards.namespace | string | `nil` | Namespace to create the dashboards ConfigMap under. |
 | metrics.enabled | bool | See values.yaml | Enable and configure a Prometheus serviceMonitor for the chart under this key. |
 | metrics.prometheusRule | object | See values.yaml | Enable and configure Prometheus Rules for the chart under this key. |
 | metrics.prometheusRule.rules | list | See prometheusrules.yaml | Configure additionial rules for the chart under this key. |
@@ -95,6 +97,22 @@ All notable changes to this application Helm chart will be documented in this fi
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### [0.1.0]
+
+#### Added
+
+- Create a Grafana dashboard ConfigMap when `metrics.dashboards.create` is `true`
+
+#### Changed
+
+- N/A
+
+#### Removed
+
+- N/A
+
+[0.0.1]: #100
+
 ### [0.0.1]
 
 #### Added
@@ -108,8 +126,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 #### Removed
 
 - N/A
-
-[0.0.1]: #100
 
 ## Support
 
