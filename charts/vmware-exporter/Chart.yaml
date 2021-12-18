@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 0.18.2
 description: A prometheus exporter for vSphere vCenter
 name: vmware-exporter
-version: 0.1.0
+version: 0.1.1
 kubeVersion: ">=1.16.0-0"
 keywords:
 - vmware-exporter

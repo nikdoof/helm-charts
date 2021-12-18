@@ -10,463 +10,49 @@
                 "limit": 100,
                 "name": "Annotations & Alerts",
                 "showIn": 0,
+                "target": {
+                    "limit": 100,
+                    "matchAny": false,
+                    "tags": [],
+                    "type": "dashboard"
+                },
                 "type": "dashboard"
             }
         ]
     },
-    "description": "VMware ESXi single instance graphs.",
+    "description": "VMware vSphere Cluster Stats",
     "editable": true,
+    "fiscalYearStartMonth": 0,
     "gnetId": 10076,
     "graphTooltip": 1,
-    "id": 3,
-    "iteration": 1574197864736,
+    "iteration": 1639829839321,
     "links": [],
+    "liveNow": false,
     "panels": [
         {
-            "cacheTimeout": null,
-            "colorBackground": false,
-            "colorValue": false,
-            "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-            ],
-            "datasource": "Prometheus",
-            "format": "short",
-            "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
             },
-            "gridPos": {
-                "h": 3,
-                "w": 4,
-                "x": 0,
-                "y": 0
-            },
-            "id": 14,
-            "interval": null,
-            "links": [],
-            "mappingType": 1,
-            "mappingTypes": [
-                {
-                    "name": "value to text",
-                    "value": 1
-                },
-                {
-                    "name": "range to text",
-                    "value": 2
-                }
-            ],
-            "maxDataPoints": 100,
-            "nullPointMode": "connected",
-            "nullText": null,
-            "options": {},
-            "postfix": "",
-            "postfixFontSize": "50%",
-            "prefix": "",
-            "prefixFontSize": "50%",
-            "rangeMaps": [
-                {
-                    "from": "null",
-                    "text": "N/A",
-                    "to": "null"
-                }
-            ],
-            "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": true,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false
-            },
-            "tableColumn": "",
-            "targets": [
-                {
-                    "expr": "sum(vmware_host_num_cpu{cluster_name=~\"$cluster\"})",
-                    "format": "time_series",
-                    "intervalFactor": 1,
-                    "refId": "A"
-                }
-            ],
-            "thresholds": "50,80",
-            "title": "Cpu Core Capacity",
-            "type": "singlestat",
-            "valueFontSize": "80%",
-            "valueMaps": [
-                {
-                    "op": "=",
-                    "text": "N/A",
-                    "value": "null"
-                }
-            ],
-            "valueName": "current"
-        },
-        {
-            "cacheTimeout": null,
-            "colorBackground": false,
-            "colorValue": false,
-            "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-            ],
-            "datasource": "Prometheus",
-            "format": "hertz",
-            "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-            },
-            "gridPos": {
-                "h": 3,
-                "w": 4,
-                "x": 4,
-                "y": 0
-            },
-            "id": 38,
-            "interval": null,
-            "links": [],
-            "mappingType": 1,
-            "mappingTypes": [
-                {
-                    "name": "value to text",
-                    "value": 1
-                },
-                {
-                    "name": "range to text",
-                    "value": 2
-                }
-            ],
-            "maxDataPoints": 100,
-            "nullPointMode": "connected",
-            "nullText": null,
-            "options": {},
-            "postfix": "",
-            "postfixFontSize": "50%",
-            "prefix": "",
-            "prefixFontSize": "50%",
-            "rangeMaps": [
-                {
-                    "from": "null",
-                    "text": "N/A",
-                    "to": "null"
-                }
-            ],
-            "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": true,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false
-            },
-            "tableColumn": "",
-            "targets": [
-                {
-                    "expr": "sum(vmware_host_cpu_max{cluster_name=~\"$cluster\"}) ",
-                    "format": "time_series",
-                    "intervalFactor": 1,
-                    "refId": "A"
-                }
-            ],
-            "thresholds": "50,80",
-            "title": "Cpu Capacity",
-            "type": "singlestat",
-            "valueFontSize": "80%",
-            "valueMaps": [
-                {
-                    "op": "=",
-                    "text": "N/A",
-                    "value": "null"
-                }
-            ],
-            "valueName": "current"
-        },
-        {
-            "cacheTimeout": null,
-            "colorBackground": false,
-            "colorValue": false,
-            "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-            ],
-            "datasource": "Prometheus",
-            "format": "decmbytes",
-            "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-            },
-            "gridPos": {
-                "h": 3,
-                "w": 4,
-                "x": 8,
-                "y": 0
-            },
-            "id": 15,
-            "interval": null,
-            "links": [],
-            "mappingType": 1,
-            "mappingTypes": [
-                {
-                    "name": "value to text",
-                    "value": 1
-                },
-                {
-                    "name": "range to text",
-                    "value": 2
-                }
-            ],
-            "maxDataPoints": 100,
-            "nullPointMode": "connected",
-            "nullText": null,
-            "options": {},
-            "postfix": "",
-            "postfixFontSize": "50%",
-            "prefix": "",
-            "prefixFontSize": "50%",
-            "rangeMaps": [
-                {
-                    "from": "null",
-                    "text": "N/A",
-                    "to": "null"
-                }
-            ],
-            "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": true,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false
-            },
-            "tableColumn": "",
-            "targets": [
-                {
-                    "expr": "sum(vmware_host_memory_max{cluster_name=~\"$cluster\"})",
-                    "format": "time_series",
-                    "intervalFactor": 1,
-                    "refId": "A"
-                }
-            ],
-            "thresholds": "50,80",
-            "title": "Memory Capacity",
-            "type": "singlestat",
-            "valueFontSize": "80%",
-            "valueMaps": [
-                {
-                    "op": "=",
-                    "text": "N/A",
-                    "value": "null"
-                }
-            ],
-            "valueName": "current"
-        },
-        {
-            "cacheTimeout": null,
-            "colorBackground": false,
-            "colorValue": false,
-            "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-            ],
-            "datasource": "Prometheus",
-            "format": "none",
-            "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-            },
-            "gridPos": {
-                "h": 3,
-                "w": 4,
-                "x": 12,
-                "y": 0
-            },
-            "id": 36,
-            "interval": null,
-            "links": [],
-            "mappingType": 1,
-            "mappingTypes": [
-                {
-                    "name": "value to text",
-                    "value": 1
-                },
-                {
-                    "name": "range to text",
-                    "value": 2
-                }
-            ],
-            "maxDataPoints": 100,
-            "nullPointMode": "connected",
-            "nullText": null,
-            "options": {},
-            "postfix": "",
-            "postfixFontSize": "50%",
-            "prefix": "",
-            "prefixFontSize": "50%",
-            "rangeMaps": [
-                {
-                    "from": "null",
-                    "text": "N/A",
-                    "to": "null"
-                }
-            ],
-            "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": true,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false
-            },
-            "tableColumn": "",
-            "targets": [
-                {
-                    "expr": "count(vmware_host_connection_state{cluster_name=~\"$cluster\"})",
-                    "format": "time_series",
-                    "intervalFactor": 1,
-                    "refId": "A"
-                }
-            ],
-            "thresholds": "50,80",
-            "title": "Host Number",
-            "type": "singlestat",
-            "valueFontSize": "80%",
-            "valueMaps": [
-                {
-                    "op": "=",
-                    "text": "N/A",
-                    "value": "null"
-                }
-            ],
-            "valueName": "current"
-        },
-        {
-            "cacheTimeout": null,
-            "colorBackground": false,
-            "colorValue": false,
-            "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-            ],
-            "datasource": "Prometheus",
-            "format": "none",
-            "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": false,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
-            },
-            "gridPos": {
-                "h": 3,
-                "w": 4,
-                "x": 16,
-                "y": 0
-            },
-            "id": 37,
-            "interval": null,
-            "links": [],
-            "mappingType": 1,
-            "mappingTypes": [
-                {
-                    "name": "value to text",
-                    "value": 1
-                },
-                {
-                    "name": "range to text",
-                    "value": 2
-                }
-            ],
-            "maxDataPoints": 100,
-            "nullPointMode": "connected",
-            "nullText": null,
-            "options": {},
-            "postfix": "",
-            "postfixFontSize": "50%",
-            "prefix": "",
-            "prefixFontSize": "50%",
-            "rangeMaps": [
-                {
-                    "from": "null",
-                    "text": "N/A",
-                    "to": "null"
-                }
-            ],
-            "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": true,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false
-            },
-            "tableColumn": "",
-            "targets": [
-                {
-                    "expr": "count(vmware_host_maintenance_mode{cluster_name=~\"$cluster\"}==1) OR vector(0)",
-                    "format": "time_series",
-                    "intervalFactor": 1,
-                    "refId": "A"
-                }
-            ],
-            "thresholds": "50,80",
-            "title": "Host In Maintenance",
-            "type": "singlestat",
-            "valueFontSize": "80%",
-            "valueMaps": [
-                {
-                    "op": "=",
-                    "text": "0",
-                    "value": "null"
-                },
-                {
-                    "op": "=",
-                    "text": "0",
-                    "value": "No Data"
-                },
-                {
-                    "op": "=",
-                    "text": "0",
-                    "value": "N/A"
-                }
-            ],
-            "valueName": "current"
-        },
-        {
-            "cacheTimeout": null,
-            "datasource": "Prometheus",
-            "gridPos": {
-                "h": 5,
-                "w": 4,
-                "x": 0,
-                "y": 3
-            },
-            "id": 12,
-            "links": [],
-            "options": {
-                "fieldOptions": {
-                    "calcs": [
-                        "lastNotNull"
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "options": {
+                                "match": "null",
+                                "result": {
+                                    "text": "N/A"
+                                }
+                            },
+                            "type": "special"
+                        }
                     ],
-                    "defaults": {
-                        "mappings": [
-                            {
-                                "id": 0,
-                                "op": "=",
-                                "text": "N/A",
-                                "type": 1,
-                                "value": "null"
-                            }
-                        ],
-                        "max": 100,
-                        "min": 0,
-                        "nullValueMode": "connected",
-                        "thresholds": [
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
                             {
                                 "color": "#299c46",
                                 "value": null
@@ -479,17 +65,432 @@
                                 "color": "#d44a3a",
                                 "value": 80
                             }
-                        ],
-                        "unit": "percent"
+                        ]
                     },
-                    "override": {},
+                    "unit": "short"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 0,
+                "y": 0
+            },
+            "id": 14,
+            "links": [],
+            "maxDataPoints": 100,
+            "options": {
+                "colorMode": "none",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
                     "values": false
                 },
+                "textMode": "auto"
+            },
+            "pluginVersion": "8.3.2",
+            "targets": [
+                {
+                    "expr": "sum(vmware_host_num_cpu{cluster_name=~\"$cluster\"})",
+                    "format": "time_series",
+                    "intervalFactor": 1,
+                    "refId": "A"
+                }
+            ],
+            "title": "Cpu Core Capacity",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "options": {
+                                "match": "null",
+                                "result": {
+                                    "text": "N/A"
+                                }
+                            },
+                            "type": "special"
+                        }
+                    ],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "#299c46",
+                                "value": null
+                            },
+                            {
+                                "color": "rgba(237, 129, 40, 0.89)",
+                                "value": 50
+                            },
+                            {
+                                "color": "#d44a3a",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "hertz"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 4,
+                "y": 0
+            },
+            "id": 38,
+            "links": [],
+            "maxDataPoints": 100,
+            "options": {
+                "colorMode": "none",
+                "graphMode": "none",
+                "justifyMode": "auto",
                 "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "8.3.2",
+            "targets": [
+                {
+                    "expr": "sum(vmware_host_cpu_max{cluster_name=~\"$cluster\"}) ",
+                    "format": "time_series",
+                    "intervalFactor": 1,
+                    "refId": "A"
+                }
+            ],
+            "title": "Cpu Capacity",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "options": {
+                                "match": "null",
+                                "result": {
+                                    "text": "N/A"
+                                }
+                            },
+                            "type": "special"
+                        }
+                    ],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "#299c46",
+                                "value": null
+                            },
+                            {
+                                "color": "rgba(237, 129, 40, 0.89)",
+                                "value": 50
+                            },
+                            {
+                                "color": "#d44a3a",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "decmbytes"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 8,
+                "y": 0
+            },
+            "id": 15,
+            "links": [],
+            "maxDataPoints": 100,
+            "options": {
+                "colorMode": "none",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "8.3.2",
+            "targets": [
+                {
+                    "expr": "sum(vmware_host_memory_max{cluster_name=~\"$cluster\"})",
+                    "format": "time_series",
+                    "intervalFactor": 1,
+                    "refId": "A"
+                }
+            ],
+            "title": "Memory Capacity",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "options": {
+                                "match": "null",
+                                "result": {
+                                    "text": "N/A"
+                                }
+                            },
+                            "type": "special"
+                        }
+                    ],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "#299c46",
+                                "value": null
+                            },
+                            {
+                                "color": "rgba(237, 129, 40, 0.89)",
+                                "value": 50
+                            },
+                            {
+                                "color": "#d44a3a",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "none"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 12,
+                "y": 0
+            },
+            "id": 36,
+            "links": [],
+            "maxDataPoints": 100,
+            "options": {
+                "colorMode": "none",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "8.3.2",
+            "targets": [
+                {
+                    "expr": "count(vmware_host_connection_state{cluster_name=~\"$cluster\"})",
+                    "format": "time_series",
+                    "intervalFactor": 1,
+                    "refId": "A"
+                }
+            ],
+            "title": "Host Number",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "options": {
+                                "N/A": {
+                                    "color": "#299c46",
+                                    "text": "0"
+                                },
+                                "No Data": {
+                                    "color": "#299c46",
+                                    "text": "0"
+                                }
+                            },
+                            "type": "value"
+                        },
+                        {
+                            "options": {
+                                "match": "null",
+                                "result": {
+                                    "color": "#299c46",
+                                    "text": "0"
+                                }
+                            },
+                            "type": "special"
+                        }
+                    ],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "#299c46",
+                                "value": null
+                            },
+                            {
+                                "color": "rgba(237, 129, 40, 0.89)",
+                                "value": 50
+                            },
+                            {
+                                "color": "#d44a3a",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "none"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 3,
+                "w": 4,
+                "x": 16,
+                "y": 0
+            },
+            "id": 37,
+            "links": [],
+            "maxDataPoints": 100,
+            "options": {
+                "colorMode": "none",
+                "graphMode": "none",
+                "justifyMode": "auto",
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "textMode": "auto"
+            },
+            "pluginVersion": "8.3.2",
+            "targets": [
+                {
+                    "expr": "count(vmware_host_maintenance_mode{cluster_name=~\"$cluster\"}==1) OR vector(0)",
+                    "format": "time_series",
+                    "intervalFactor": 1,
+                    "refId": "A"
+                }
+            ],
+            "title": "Host In Maintenance",
+            "type": "stat"
+        },
+        {
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "id": 0,
+                            "op": "=",
+                            "text": "N/A",
+                            "type": 1,
+                            "value": "null"
+                        }
+                    ],
+                    "max": 100,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "#299c46",
+                                "value": null
+                            },
+                            {
+                                "color": "rgba(237, 129, 40, 0.89)",
+                                "value": 50
+                            },
+                            {
+                                "color": "#d44a3a",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "percent"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 5,
+                "w": 4,
+                "x": 0,
+                "y": 3
+            },
+            "id": 12,
+            "links": [],
+            "options": {
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
                 "showThresholdLabels": false,
                 "showThresholdMarkers": true
             },
-            "pluginVersion": "6.4.1",
+            "pluginVersion": "8.3.2",
             "targets": [
                 {
                     "expr": "sum(vmware_host_cpu_usagemhz_average{cluster_name=~\"$cluster\"}) * 100 / sum(vmware_host_cpu_max{cluster_name=~\"$cluster\"})",
@@ -503,35 +504,29 @@
             "type": "gauge"
         },
         {
-            "cacheTimeout": null,
-            "datasource": "Prometheus",
-            "gridPos": {
-                "h": 5,
-                "w": 4,
-                "x": 4,
-                "y": 3
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
             },
-            "id": 25,
-            "links": [],
-            "options": {
-                "fieldOptions": {
-                    "calcs": [
-                        "lastNotNull"
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "id": 0,
+                            "op": "=",
+                            "text": "N/A",
+                            "type": 1,
+                            "value": "null"
+                        }
                     ],
-                    "defaults": {
-                        "mappings": [
-                            {
-                                "id": 0,
-                                "op": "=",
-                                "text": "N/A",
-                                "type": 1,
-                                "value": "null"
-                            }
-                        ],
-                        "max": 20,
-                        "min": 0,
-                        "nullValueMode": "connected",
-                        "thresholds": [
+                    "max": 20,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
                             {
                                 "color": "#299c46",
                                 "value": null
@@ -544,17 +539,33 @@
                                 "color": "#d44a3a",
                                 "value": 10
                             }
-                        ],
-                        "unit": "percent"
+                        ]
                     },
-                    "override": {},
+                    "unit": "percent"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 5,
+                "w": 4,
+                "x": 4,
+                "y": 3
+            },
+            "id": 25,
+            "links": [],
+            "options": {
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
                     "values": false
                 },
-                "orientation": "horizontal",
                 "showThresholdLabels": false,
                 "showThresholdMarkers": true
             },
-            "pluginVersion": "6.4.1",
+            "pluginVersion": "8.3.2",
             "targets": [
                 {
                     "expr": "max(vmware_vm_cpu_ready_summation{cluster_name=~\"$cluster\"})/ 200",
@@ -568,35 +579,29 @@
             "type": "gauge"
         },
         {
-            "cacheTimeout": null,
-            "datasource": "Prometheus",
-            "gridPos": {
-                "h": 5,
-                "w": 4,
-                "x": 8,
-                "y": 3
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
             },
-            "id": 26,
-            "links": [],
-            "options": {
-                "fieldOptions": {
-                    "calcs": [
-                        "lastNotNull"
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "id": 0,
+                            "op": "=",
+                            "text": "N/A",
+                            "type": 1,
+                            "value": "null"
+                        }
                     ],
-                    "defaults": {
-                        "mappings": [
-                            {
-                                "id": 0,
-                                "op": "=",
-                                "text": "N/A",
-                                "type": 1,
-                                "value": "null"
-                            }
-                        ],
-                        "max": 10,
-                        "min": 0,
-                        "nullValueMode": "connected",
-                        "thresholds": [
+                    "max": 10,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
                             {
                                 "color": "#299c46",
                                 "value": null
@@ -609,17 +614,33 @@
                                 "color": "#d44a3a",
                                 "value": 3
                             }
-                        ],
-                        "unit": "percent"
+                        ]
                     },
-                    "override": {},
+                    "unit": "percent"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 5,
+                "w": 4,
+                "x": 8,
+                "y": 3
+            },
+            "id": 26,
+            "links": [],
+            "options": {
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
                     "values": false
                 },
-                "orientation": "horizontal",
                 "showThresholdLabels": false,
                 "showThresholdMarkers": true
             },
-            "pluginVersion": "6.4.1",
+            "pluginVersion": "8.3.2",
             "targets": [
                 {
                     "expr": "max(vmware_vm_cpu_costop_summation{cluster_name=~\"$cluster\"})/200",
@@ -635,10 +656,18 @@
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -647,6 +676,7 @@
                 "x": 12,
                 "y": 3
             },
+            "hiddenSeries": false,
             "id": 17,
             "legend": {
                 "avg": false,
@@ -662,9 +692,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -682,9 +713,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster CPU usage",
             "tooltip": {
                 "shared": true,
@@ -693,9 +722,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -703,43 +730,62 @@
                 {
                     "decimals": 1,
                     "format": "percent",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
-            "cacheTimeout": null,
-            "colorBackground": false,
-            "colorValue": false,
-            "colors": [
-                "#299c46",
-                "rgba(237, 129, 40, 0.89)",
-                "#d44a3a"
-            ],
-            "datasource": "Prometheus",
-            "format": "percent",
-            "gauge": {
-                "maxValue": 100,
-                "minValue": 0,
-                "show": true,
-                "thresholdLabels": false,
-                "thresholdMarkers": true
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "mappings": [
+                        {
+                            "options": {
+                                "match": "null",
+                                "result": {
+                                    "text": "N/A"
+                                }
+                            },
+                            "type": "special"
+                        }
+                    ],
+                    "max": 100,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "#299c46",
+                                "value": null
+                            },
+                            {
+                                "color": "rgba(237, 129, 40, 0.89)",
+                                "value": 50
+                            },
+                            {
+                                "color": "#d44a3a",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "percent"
+                },
+                "overrides": []
             },
             "gridPos": {
                 "h": 5,
@@ -748,41 +794,21 @@
                 "y": 8
             },
             "id": 13,
-            "interval": null,
             "links": [],
-            "mappingType": 1,
-            "mappingTypes": [
-                {
-                    "name": "value to text",
-                    "value": 1
-                },
-                {
-                    "name": "range to text",
-                    "value": 2
-                }
-            ],
             "maxDataPoints": 100,
-            "nullPointMode": "connected",
-            "nullText": null,
-            "options": {},
-            "postfix": "",
-            "postfixFontSize": "50%",
-            "prefix": "",
-            "prefixFontSize": "50%",
-            "rangeMaps": [
-                {
-                    "from": "null",
-                    "text": "N/A",
-                    "to": "null"
-                }
-            ],
-            "sparkline": {
-                "fillColor": "rgba(31, 118, 189, 0.18)",
-                "full": true,
-                "lineColor": "rgb(31, 120, 193)",
-                "show": false
+            "options": {
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showThresholdLabels": false,
+                "showThresholdMarkers": true
             },
-            "tableColumn": "",
+            "pluginVersion": "8.3.2",
             "targets": [
                 {
                     "expr": "sum(vmware_host_memory_usage{cluster_name=~\"$cluster\"}) * 100 / sum(vmware_host_memory_max{cluster_name=~\"$cluster\"})",
@@ -792,50 +818,34 @@
                     "refId": "A"
                 }
             ],
-            "thresholds": "50,80",
             "title": "Cluster Memory usage",
-            "type": "singlestat",
-            "valueFontSize": "80%",
-            "valueMaps": [
-                {
-                    "op": "=",
-                    "text": "N/A",
-                    "value": "null"
-                }
-            ],
-            "valueName": "current"
+            "type": "gauge"
         },
         {
-            "cacheTimeout": null,
-            "datasource": "Prometheus",
-            "gridPos": {
-                "h": 5,
-                "w": 4,
-                "x": 4,
-                "y": 8
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
             },
-            "id": 31,
-            "links": [],
-            "options": {
-                "fieldOptions": {
-                    "calcs": [
-                        "max"
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "decimals": 1,
+                    "mappings": [
+                        {
+                            "id": 0,
+                            "op": "=",
+                            "text": "N/A",
+                            "type": 1,
+                            "value": "null"
+                        }
                     ],
-                    "defaults": {
-                        "decimals": 1,
-                        "mappings": [
-                            {
-                                "id": 0,
-                                "op": "=",
-                                "text": "N/A",
-                                "type": 1,
-                                "value": "null"
-                            }
-                        ],
-                        "max": 100,
-                        "min": 0,
-                        "nullValueMode": "connected",
-                        "thresholds": [
+                    "max": 100,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
                             {
                                 "color": "#299c46",
                                 "value": null
@@ -848,17 +858,33 @@
                                 "color": "#d44a3a",
                                 "value": 2048
                             }
-                        ],
-                        "unit": "deckbytes"
+                        ]
                     },
-                    "override": {},
+                    "unit": "deckbytes"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 5,
+                "w": 4,
+                "x": 4,
+                "y": 8
+            },
+            "id": 31,
+            "links": [],
+            "options": {
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "max"
+                    ],
+                    "fields": "",
                     "values": false
                 },
-                "orientation": "horizontal",
                 "showThresholdLabels": false,
                 "showThresholdMarkers": true
             },
-            "pluginVersion": "6.4.1",
+            "pluginVersion": "8.3.2",
             "targets": [
                 {
                     "expr": "max(vmware_vm_mem_vmmemctl_average{cluster_name=~\"$cluster\"})",
@@ -871,36 +897,30 @@
             "type": "gauge"
         },
         {
-            "cacheTimeout": null,
-            "datasource": "Prometheus",
-            "gridPos": {
-                "h": 5,
-                "w": 4,
-                "x": 8,
-                "y": 8
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
             },
-            "id": 35,
-            "links": [],
-            "options": {
-                "fieldOptions": {
-                    "calcs": [
-                        "max"
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "thresholds"
+                    },
+                    "decimals": 2,
+                    "mappings": [
+                        {
+                            "id": 0,
+                            "op": "=",
+                            "text": "N/A",
+                            "type": 1,
+                            "value": "null"
+                        }
                     ],
-                    "defaults": {
-                        "decimals": 2,
-                        "mappings": [
-                            {
-                                "id": 0,
-                                "op": "=",
-                                "text": "N/A",
-                                "type": 1,
-                                "value": "null"
-                            }
-                        ],
-                        "max": 100,
-                        "min": 0,
-                        "nullValueMode": "connected",
-                        "thresholds": [
+                    "max": 100,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
                             {
                                 "color": "#299c46",
                                 "value": null
@@ -913,17 +933,33 @@
                                 "color": "#d44a3a",
                                 "value": 0.1
                             }
-                        ],
-                        "unit": "deckbytes"
+                        ]
                     },
-                    "override": {},
+                    "unit": "deckbytes"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 5,
+                "w": 4,
+                "x": 8,
+                "y": 8
+            },
+            "id": 35,
+            "links": [],
+            "options": {
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "max"
+                    ],
+                    "fields": "",
                     "values": false
                 },
-                "orientation": "horizontal",
                 "showThresholdLabels": false,
                 "showThresholdMarkers": true
             },
-            "pluginVersion": "6.4.1",
+            "pluginVersion": "8.3.2",
             "targets": [
                 {
                     "expr": "max(vmware_vm_mem_swapped_average{cluster_name=~\"$cluster\"})",
@@ -938,10 +974,18 @@
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -950,6 +994,7 @@
                 "x": 12,
                 "y": 8
             },
+            "hiddenSeries": false,
             "id": 18,
             "legend": {
                 "avg": false,
@@ -965,9 +1010,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -985,9 +1031,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Memory usage",
             "tooltip": {
                 "shared": true,
@@ -996,9 +1040,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1006,34 +1048,35 @@
                 {
                     "decimals": 1,
                     "format": "percent",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
             "decimals": 1,
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1042,6 +1085,7 @@
                 "x": 0,
                 "y": 13
             },
+            "hiddenSeries": false,
             "id": 19,
             "legend": {
                 "avg": true,
@@ -1057,9 +1101,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1077,9 +1122,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Network Usage",
             "tooltip": {
                 "shared": true,
@@ -1088,9 +1131,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1098,34 +1139,35 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
             "decimals": 1,
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1134,6 +1176,7 @@
                 "x": 0,
                 "y": 19
             },
+            "hiddenSeries": false,
             "id": 22,
             "legend": {
                 "avg": true,
@@ -1149,9 +1192,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1169,9 +1213,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Network Receive Usage",
             "tooltip": {
                 "shared": true,
@@ -1180,9 +1222,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1190,33 +1230,34 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1225,6 +1266,7 @@
                 "x": 12,
                 "y": 19
             },
+            "hiddenSeries": false,
             "id": 21,
             "legend": {
                 "avg": true,
@@ -1240,9 +1282,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1260,9 +1303,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Network Transmit Rate",
             "tooltip": {
                 "shared": true,
@@ -1271,9 +1312,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1281,34 +1320,35 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
             "decimals": 1,
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1317,6 +1357,7 @@
                 "x": 0,
                 "y": 24
             },
+            "hiddenSeries": false,
             "id": 27,
             "legend": {
                 "avg": true,
@@ -1332,9 +1373,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1352,9 +1394,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Network Broadcast RX",
             "tooltip": {
                 "shared": true,
@@ -1363,9 +1403,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1373,33 +1411,34 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1408,6 +1447,7 @@
                 "x": 12,
                 "y": 24
             },
+            "hiddenSeries": false,
             "id": 28,
             "legend": {
                 "avg": true,
@@ -1423,9 +1463,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1443,9 +1484,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Network Broadcast TX",
             "tooltip": {
                 "shared": true,
@@ -1454,9 +1493,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1464,34 +1501,35 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
             "decimals": 1,
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1500,6 +1538,7 @@
                 "x": 0,
                 "y": 29
             },
+            "hiddenSeries": false,
             "id": 29,
             "legend": {
                 "avg": true,
@@ -1515,9 +1554,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1535,9 +1575,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Host Network Multicast RX",
             "tooltip": {
                 "shared": true,
@@ -1546,9 +1584,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1556,34 +1592,35 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
             "decimals": 1,
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1592,6 +1629,7 @@
                 "x": 12,
                 "y": 29
             },
+            "hiddenSeries": false,
             "id": 30,
             "legend": {
                 "avg": true,
@@ -1607,9 +1645,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1627,9 +1666,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Network Multicast TX",
             "tooltip": {
                 "shared": true,
@@ -1638,9 +1675,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1648,33 +1683,34 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1683,6 +1719,7 @@
                 "x": 0,
                 "y": 34
             },
+            "hiddenSeries": false,
             "id": 20,
             "legend": {
                 "avg": true,
@@ -1698,9 +1735,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1718,9 +1756,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Disk Read And Write",
             "tooltip": {
                 "shared": true,
@@ -1729,9 +1765,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1739,33 +1773,34 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1774,6 +1809,7 @@
                 "x": 0,
                 "y": 39
             },
+            "hiddenSeries": false,
             "id": 23,
             "legend": {
                 "avg": true,
@@ -1789,9 +1825,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1809,9 +1846,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Disk Read",
             "tooltip": {
                 "shared": true,
@@ -1820,9 +1855,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1830,33 +1863,34 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "aliasColors": {},
             "bars": false,
-            "cacheTimeout": null,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "Prometheus",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "PBFA97CFB590B2093"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "links": []
+                },
+                "overrides": []
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -1865,6 +1899,7 @@
                 "x": 12,
                 "y": 39
             },
+            "hiddenSeries": false,
             "id": 24,
             "legend": {
                 "avg": true,
@@ -1880,9 +1915,10 @@
             "links": [],
             "nullPointMode": "null",
             "options": {
-                "dataLinks": []
+                "alertThreshold": true
             },
             "percentage": false,
+            "pluginVersion": "8.3.2",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -1900,9 +1936,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Cluster Disk Write",
             "tooltip": {
                 "shared": true,
@@ -1911,9 +1945,7 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
@@ -1921,34 +1953,31 @@
                 {
                     "decimals": 1,
                     "format": "KBs",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         }
     ],
-    "schemaVersion": 20,
+    "schemaVersion": 33,
     "style": "dark",
-    "tags": [],
+    "tags": [
+        "vmware",
+        "vmware-exporter"
+    ],
     "templating": {
         "list": [
             {
                 "current": {
+                    "selected": false,
                     "text": "Prometheus",
                     "value": "Prometheus"
                 },
@@ -1965,14 +1994,19 @@
                 "type": "datasource"
             },
             {
-                "allValue": null,
                 "current": {
-                    "text": "cluster1",
+                    "selected": true,
+                    "text": [
+                        "Home"
+                    ],
                     "value": [
-                        "cluster1"
+                        "Home"
                     ]
                 },
-                "datasource": "Prometheus",
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "PBFA97CFB590B2093"
+                },
                 "definition": "label_values(cluster_name)",
                 "hide": 0,
                 "includeAll": false,
@@ -1980,13 +2014,15 @@
                 "multi": true,
                 "name": "cluster",
                 "options": [],
-                "query": "label_values(cluster_name)",
+                "query": {
+                    "query": "label_values(cluster_name)",
+                    "refId": "Prometheus-cluster-Variable-Query"
+                },
                 "refresh": 1,
                 "regex": "",
                 "skipUrlSync": false,
                 "sort": 0,
                 "tagValuesQuery": "",
-                "tags": [],
                 "tagsQuery": "",
                 "type": "query",
                 "useTags": false
@@ -2024,7 +2060,8 @@
         ]
     },
     "timezone": "browser",
-    "title": "VMware Cluster",
+    "title": "VMware / Cluster",
     "uid": "MRvkcY2Zz",
-    "version": 13
+    "version": 1,
+    "weekStart": ""
 }
