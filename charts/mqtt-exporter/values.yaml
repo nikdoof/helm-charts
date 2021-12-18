@@ -1,0 +1,73 @@
+#
+# IMPORTANT NOTE
+#
+# This chart inherits from our common library chart. You can check the default values/options here:
+# https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
+#
+
+image:
+  # -- image repository
+  repository: kpetrem/mqtt-exporter
+  # -- image tag
+  tag: latest
+  # -- image pull policy
+  pullPolicy: IfNotPresent
+
+# -- environment variables. See more environment variables in the [mqtt-exporter documentation](https://mqtt-exporter.org/docs).
+# @default -- See below
+env:
+  # -- IP or hostname of MQTT broker (default: 127.0.0.1)
+  MQTT_ADDRESS:
+  # -- TCP port of MQTT broker (default: 1883)
+  MQTT_PORT: 1883
+  # -- Topic path to subscribe to (default: #)
+  MQTT_TOPIC: "#"
+  # -- Username which should be used to authenticate against the MQTT broker (default: None)
+  # MQTT_USERNAME:
+  # -- Password which should be used to authenticate against the MQTT broker (default: None)
+  # MQTT_PASSWORD:
+
+# -- Configures service settings for the chart.
+# @default -- See values.yaml
+service:
+  main:
+    ports:
+      http:
+        enabled: false
+      metrics:
+        enabled: true
+        protocol: TCP
+        port: 9000
+
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See values.yaml
+  main:
+    enabled: false
+
+metrics:
+  # -- Enable and configure a Prometheus serviceMonitor for the chart under this key.
+  # @default -- See values.yaml
+  enabled: false
+  serviceMonitor:
+    interval: 1m
+    scrapeTimeout: 30s
+    labels: {}
+  # -- Enable and configure Prometheus Rules for the chart under this key.
+  # @default -- See values.yaml
+  prometheusRule:
+    enabled: false
+    labels: {}
+    # -- Configure additionial rules for the chart under this key.
+    # @default -- See prometheusrules.yaml
+    rules:
+      []
+      # - alert: MQTTExporterAbsent
+      #   annotations:
+      #     description: MQTT Exporter has disappeared from Prometheus service discovery.
+      #     summary: MQTT Exporter is down.
+      #   expr: |
+      #     absent(up{job=~".*mqttexporter.*"} == 1)
+      #   for: 5m
+      #   labels:
+      #     severity: critical
