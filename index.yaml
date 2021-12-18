@@ -607,6 +607,29 @@ entries:
   vmware-exporter:
   - apiVersion: v2
     appVersion: 0.18.2
+    created: "2021-12-18T12:26:52.153130821Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: A prometheus exporter for vSphere vCenter
+    digest: 081d8fc9d8629946508fa266bf7f71784f4978c6a02e875fa5c562bc19d82dd7
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/vmware-exporter
+    keywords:
+    - vmware-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vmware-exporter
+    sources:
+    - https://github.com/pryorda/vmware_exporter
+    - https://hub.docker.com/r/pryorda/vmware_exporter/tags
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vmware-exporter-0.1.1/vmware-exporter-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.18.2
     created: "2021-12-18T11:54:38.902300443Z"
     dependencies:
     - name: common
@@ -825,4 +848,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-18T11:54:38.902434543Z"
+generated: "2021-12-18T12:26:52.153472321Z"
