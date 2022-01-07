@@ -1,0 +1,21 @@
+{{- $values := .Values.service -}}
+{{- $serviceName := include "common.names.fullname" . -}}
+{{- if and (hasKey $values "nameOverride") $values.nameOverride -}}
+  {{- $serviceName = printf "%v-%v" $serviceName $values.nameOverride -}}
+{{ end -}}
+{{- $defaultAntennasURL := printf "http://%v:%v" $serviceName .Values.service.main.ports.http.port -}}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "common.names.fullname" . }}-config
+  labels:
+    {{- include "common.labels" . | nindent 4 }}
+data:
+  config.yml: |-
+    tvheadend_url: {{ required "A TVHeadend URL is required!" .Values.antennas.tvheadend_url }}
+    antennas_url: {{ .Values.antennas.antennas_url | default $defaultAntennasURL }}
+    tuner_count: {{ .Values.antennas.tuner_count }}
+    {{ if .Values.antennas.stream_url }}
+    stream_url: {{ .Values.antennas.stream_url }}
+    {{ end }}
