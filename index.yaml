@@ -227,6 +227,32 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/aaisp2mqtt-0.3.0/aaisp2mqtt-0.3.0.tgz
     version: 0.3.0
+  antennas:
+  - apiVersion: v2
+    appVersion: 4.1.0
+    created: "2022-01-07T17:56:27.675287338Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.2.0
+    description: Antennas
+    digest: 9c86d93aa348c2c4ae8dfdfc8650fd5c1a80c038c1ed1b71dfe96cc7e4e6e047
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/antennas/
+    keywords:
+    - tvheadend
+    - antennas
+    - iptv
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: antennas
+    sources:
+    - https://github.com/jfarseneau/antennas
+    - https://hub.docker.com/r/thejf/antennas
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/antennas-1.0.0/antennas-1.0.0.tgz
+    version: 1.0.0
   calibre-web:
   - apiVersion: v1
     appVersion: 0.6.6-ls58
@@ -959,4 +985,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2021-12-18T18:01:58.011832288Z"
+generated: "2022-01-07T17:56:27.675424251Z"
