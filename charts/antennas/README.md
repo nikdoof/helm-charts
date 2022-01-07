@@ -79,9 +79,11 @@ N/A
 | antennas | object | See below | Antennas configuration options. See more environment variables in the [antennas documentation](https://github.com/jfarseneau/antennas). |
 | antennas.antennas_url | string | `nil` | Externally accessible URL for this antennas instance, defaults to the main service http port. |
 | antennas.stream_url | string | `nil` | Optional stream URL, used for situations where the internal and external URL for TVHeadend is different. |
-| antennas.tuner_count | int | `4` | Number of tuners to present |
+| antennas.tuner_count | int | `4` | Number of tuners to present to Plex |
 | antennas.tvheadend_url | string | `nil` | URL of the TVHeadend instance. |
+| dnsPolicy | string | `nil` | When hostNetwork is true set dnsPolicy to ClusterFirstWithHostNet |
 | env | object | See below | environment variables. See more environment variables in the [antennas documentation](https://github.com/jfarseneau/antennas). |
+| hostNetwork | bool | `false` | Enable Antennas to be discoverable via SSDP |
 | image.pullPolicy | string | `"IfNotPresent"` | image pull policy |
 | image.repository | string | `"thejf/antennas"` | image repository |
 | image.tag | string | `"4.1.0"` | image tag |

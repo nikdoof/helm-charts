@@ -31,6 +31,12 @@ ingress:
   main:
     enabled: false
 
+# -- Enable Antennas to be discoverable via SSDP
+hostNetwork: false
+
+# -- When hostNetwork is true set dnsPolicy to ClusterFirstWithHostNet
+dnsPolicy: # ClusterFirstWithHostNet
+
 # -- Antennas configuration options. See more environment variables in the [antennas documentation](https://github.com/jfarseneau/antennas).
 # @default -- See below
 antennas:
@@ -38,7 +44,7 @@ antennas:
   tvheadend_url:
   # -- Optional stream URL, used for situations where the internal and external URL for TVHeadend is different.
   stream_url:
-  # -- Number of tuners to present
+  # -- Number of tuners to present to Plex
   tuner_count: 4
   # -- Externally accessible URL for this antennas instance, defaults to the main service http port.
   antennas_url:
