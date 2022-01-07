@@ -35,7 +35,7 @@ ingress:
 hostNetwork: false
 
 # -- When hostNetwork is true set dnsPolicy to ClusterFirstWithHostNet
-dnsPolicy: # ClusterFirstWithHostNet
+dnsPolicy:  # ClusterFirstWithHostNet
 
 # -- Antennas configuration options. See more environment variables in the [antennas documentation](https://github.com/jfarseneau/antennas).
 # @default -- See below
