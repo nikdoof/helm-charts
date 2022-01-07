@@ -1,0 +1,21 @@
+apiVersion: v2
+appVersion: "4.1.0"
+description: Antennas
+name: antennas
+version: 0.1.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - tvheadend
+  - antennas
+  - iptv
+home: https://github.com/nikdoof/helm-charts/tree/master/charts/antennas/
+sources:
+  - https://github.com/jfarseneau/antennas
+  - https://hub.docker.com/r/thejf/antennas
+maintainers:
+  - name: nikdoof
+    email: andy@tensixtyone.com
+dependencies:
+  - name: common
+    repository: https://library-charts.k8s-at-home.com
+    version: 4.2.0
