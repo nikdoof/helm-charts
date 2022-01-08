@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 0.2.2
 description: A prometheus exporter for Plex Media Server
 name: plex-exporter
-version: 0.0.3
+version: 0.1.0
 kubeVersion: ">=1.16.0-0"
 keywords:
   - plex-exporter
@@ -16,4 +16,4 @@ maintainers:
 dependencies:
   - name: common
     repository: https://library-charts.k8s-at-home.com
-    version: 4.2.0
+    version: 4.3.0
