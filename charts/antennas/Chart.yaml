@@ -1,8 +1,8 @@
 apiVersion: v2
-appVersion: "4.1.0"
+appVersion: "4.2.0"
 description: Antennas
 name: antennas
-version: 1.1.1
+version: 1.1.2
 kubeVersion: ">=1.16.0-0"
 keywords:
   - tvheadend
