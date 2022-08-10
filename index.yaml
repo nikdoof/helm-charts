@@ -251,6 +251,31 @@ entries:
     version: 0.3.0
   antennas:
   - apiVersion: v2
+    appVersion: 4.2.0
+    created: "2022-08-10T16:29:43.582093266Z"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Antennas
+    digest: 2ef8bc9cd87342b1246344edcfadc6f01ff2ee4da8429088ea2c9635abf98a5c
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/antennas/
+    keywords:
+    - tvheadend
+    - antennas
+    - iptv
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: antennas
+    sources:
+    - https://github.com/jfarseneau/antennas
+    - https://hub.docker.com/r/thejf/antennas
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/antennas-1.1.2/antennas-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
     appVersion: 4.1.0
     created: "2022-08-10T16:15:48.631996932Z"
     dependencies:
@@ -1169,4 +1194,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-10T16:15:48.632144533Z"
+generated: "2022-08-10T16:29:43.582220966Z"
