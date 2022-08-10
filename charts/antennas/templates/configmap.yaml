@@ -1,3 +1,4 @@
+{{- include "common.values.setup" . -}}
 {{- $values := .Values.service -}}
 {{- $serviceName := include "common.names.fullname" . -}}
 {{- if and (hasKey $values "nameOverride") $values.nameOverride -}}
