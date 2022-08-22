@@ -426,6 +426,21 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/common-4.5.2/common-4.5.2.tgz
     version: 4.5.2
+  common-chart:
+  - apiVersion: v2
+    created: "2022-08-22T15:37:04.38088904Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.2
+    description: A simple wrapper chart around the common chart
+    digest: 470de67b7f6f49a83985188c776c075edf4ec8f580ba95d213be87d08c0d0856
+    maintainers:
+    - name: nikdoof
+    name: common-chart
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/common-chart-1.2.2/common-chart-1.2.2.tgz
+    version: 1.2.2
   deluge:
   - apiVersion: v1
     appVersion: 2.0.3-2201906121747ubuntu18.04.1-ls57
@@ -1210,4 +1225,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-22T15:35:02.31771872Z"
+generated: "2022-08-22T15:37:04.381020943Z"
