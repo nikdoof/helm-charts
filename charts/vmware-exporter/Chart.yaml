@@ -2,18 +2,18 @@ apiVersion: v2
 appVersion: 0.18.2
 description: A prometheus exporter for vSphere vCenter
 name: vmware-exporter
-version: 0.2.0
+version: 0.2.1
 kubeVersion: ">=1.16.0-0"
 keywords:
-- vmware-exporter
+  - vmware-exporter
 home: https://github.com/nikdoof/helm-charts/tree/master/charts/vmware-exporter
 sources:
-- https://github.com/pryorda/vmware_exporter
-- https://hub.docker.com/r/pryorda/vmware_exporter/tags
+  - https://github.com/pryorda/vmware_exporter
+  - https://hub.docker.com/r/pryorda/vmware_exporter/tags
 maintainers:
-- name: nikdoof
-  email: andy@tensixtyone.com
+  - name: nikdoof
+    email: andy@tensixtyone.com
 dependencies:
-- name: common
-  repository: https://library-charts.k8s-at-home.com
-  version: 4.3.0
+  - name: common
+    repository: https://nikdoof.github.io/helm-charts/
+    version: 4.5.2

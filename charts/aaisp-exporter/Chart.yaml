@@ -2,17 +2,17 @@ apiVersion: v2
 appVersion: 0.2.1
 description: A prometheus exporter for the Andrew & Arnold CHAOS API
 name: aaisp-exporter
-version: 0.2.0
+version: 0.2.1
 kubeVersion: ">=1.16.0-0"
 keywords:
-- aaisp-exporter
+  - aaisp-exporter
 home: https://github.com/nikdoof/helm-charts/tree/master/charts/aaisp-exporter
 sources:
-- https://github.com/nikdoof/aaisp-chaos
+  - https://github.com/nikdoof/aaisp-chaos
 maintainers:
-- name: nikdoof
-  email: andy@tensixtyone.com
+  - name: nikdoof
+    email: andy@tensixtyone.com
 dependencies:
-- name: common
-  repository: https://library-charts.k8s-at-home.com
-  version: 4.3.0
+  - name: common
+    repository: https://nikdoof.github.io/helm-charts/
+    version: 4.5.2
