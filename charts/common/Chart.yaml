@@ -1,0 +1,11 @@
+apiVersion: v2
+name: common
+description: Common chart library, based off KaH's common
+type: library
+version: 4.5.2
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - common
+home: https://github.com/nikdoof/helm-charts/tree/main/stable/common
+maintainers:
+  - name: nikdoof
