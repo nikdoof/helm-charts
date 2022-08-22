@@ -1,9 +1,0 @@
-aaisp:
-  username: test1@a
-  password: TesttestTest
-
-mqtt:
-  broker: localhost
-
-homeassistant:
-  enabled: true

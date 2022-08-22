@@ -1,7 +1,0 @@
-vsphere:
-  hostname: vcenter
-  username: test
-  password: test
-
-influxdb:
-  hostname: test
