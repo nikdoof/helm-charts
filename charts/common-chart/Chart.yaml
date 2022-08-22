@@ -1,0 +1,11 @@
+---
+apiVersion: v2
+description: A simple wrapper chart around the common chart
+name: common-chart
+version: 1.2.2
+maintainers:
+  - name: nikdoof
+dependencies:
+  - name: common
+    repository: https://nikdoof.github.io/helm-charts/
+    version: 4.5.2
