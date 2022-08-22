@@ -410,6 +410,22 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/calibre-web-1.1.1/calibre-web-1.1.1.tgz
     version: 1.1.1
+  common:
+  - apiVersion: v2
+    created: "2022-08-22T15:35:02.317627719Z"
+    description: Common chart library, based off KaH's common
+    digest: ca3fd670bc920265a1392d71da499b4721b6a17235ab45d7e8d32336bab3e3bd
+    home: https://github.com/nikdoof/helm-charts/tree/main/stable/common
+    keywords:
+    - common
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - name: nikdoof
+    name: common
+    type: library
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/common-4.5.2/common-4.5.2.tgz
+    version: 4.5.2
   deluge:
   - apiVersion: v1
     appVersion: 2.0.3-2201906121747ubuntu18.04.1-ls57
@@ -1194,4 +1210,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-10T16:29:43.582220966Z"
+generated: "2022-08-22T15:35:02.31771872Z"
