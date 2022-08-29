@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 0.2.2
 description: A prometheus exporter for Plex Media Server
 name: plex-exporter
-version: 0.1.1
+version: 0.1.2
 kubeVersion: ">=1.16.0-0"
 keywords:
   - plex-exporter
