@@ -3,6 +3,28 @@ entries:
   aaisp-exporter:
   - apiVersion: v2
     appVersion: 0.2.1
+    created: "2022-08-29T07:07:42.28698478Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.2
+    description: A prometheus exporter for the Andrew & Arnold CHAOS API
+    digest: 3ec4e7ecc4784b0f644b1355756629d872ba50686227fb1d7c112e24c1d37b9d
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/aaisp-exporter
+    keywords:
+    - aaisp-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp-exporter
+    sources:
+    - https://github.com/nikdoof/aaisp-chaos
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-exporter-0.2.2/aaisp-exporter-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 0.2.1
     created: "2022-08-22T15:51:49.192310039Z"
     dependencies:
     - name: common
@@ -531,6 +553,28 @@ entries:
   hg612-exporter:
   - apiVersion: v2
     appVersion: 0.1.2
+    created: "2022-08-29T07:07:42.400098307Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.2
+    description: A prometheus exporter for the HG612 modem
+    digest: a79c2c2fb195599ae016982c35ffdc34c0fdf5c192755aa45e625e6b53d86c87
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/hg612-exporter
+    keywords:
+    - hg612-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: hg612-exporter
+    sources:
+    - https://github.com/nikdoof/hg612-exporter
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/hg612-exporter-1.2.2/hg612-exporter-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v2
+    appVersion: 0.1.2
     created: "2022-08-22T15:51:49.463039008Z"
     dependencies:
     - name: common
@@ -877,6 +921,28 @@ entries:
   mqtt-exporter:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2022-08-29T07:07:42.521025357Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.2
+    description: A prometheus exporter for generic MQTT metrics
+    digest: 23d8182b14653cb822e830f4008c3b1930f11f84f47b61c88bc59d13cc28912a
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/mqtt-exporter
+    keywords:
+    - mqtt-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: mqtt-exporter
+    sources:
+    - https://github.com/kpetremann/mqtt-exporter
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/mqtt-exporter-1.1.2/mqtt-exporter-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2022-08-22T15:51:49.719904265Z"
     dependencies:
     - name: common
@@ -979,6 +1045,29 @@ entries:
     - https://github.com/nikdoof/helm-charts/releases/download/nfs-client-provisioner-1.2.12/nfs-client-provisioner-1.2.12.tgz
     version: 1.2.12
   plex-exporter:
+  - apiVersion: v2
+    appVersion: 0.2.2
+    created: "2022-08-29T07:07:42.633114855Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.2
+    description: A prometheus exporter for Plex Media Server
+    digest: a6726d0356dbbebc8c42e04e4b5fc703f3f48c737782dfff9bab4a67dc936388
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/plex-exporter
+    keywords:
+    - plex-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: plex-exporter
+    sources:
+    - https://github.com/arnarg/plex_exporter
+    - https://hub.docker.com/r/granra/plex_exporter/
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/plex-exporter-0.1.2/plex-exporter-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 0.2.2
     created: "2022-08-22T15:51:49.86297245Z"
@@ -1095,6 +1184,29 @@ entries:
     - https://github.com/nikdoof/helm-charts/releases/download/plex-exporter-0.0.1/plex-exporter-0.0.1.tgz
     version: 0.0.1
   vmware-exporter:
+  - apiVersion: v2
+    appVersion: 0.18.2
+    created: "2022-08-29T07:07:42.743665309Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.2
+    description: A prometheus exporter for vSphere vCenter
+    digest: 4c62aac6b75dbb0789d230bd24e9461db02e26e5ceb37456a45aeb4cab0ec184
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/vmware-exporter
+    keywords:
+    - vmware-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vmware-exporter
+    sources:
+    - https://github.com/pryorda/vmware_exporter
+    - https://hub.docker.com/r/pryorda/vmware_exporter/tags
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vmware-exporter-0.2.2/vmware-exporter-0.2.2.tgz
+    version: 0.2.2
   - apiVersion: v2
     appVersion: 0.18.2
     created: "2022-08-22T15:51:50.003001454Z"
@@ -1384,4 +1496,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-22T15:51:50.003226853Z"
+generated: "2022-08-29T07:07:42.744005419Z"
