@@ -37,7 +37,7 @@ jobs:
       - name: Create k3d cluster
         uses: nolar/setup-k3d-k3s@v1
         with:
-          version: v1.19
+          version: v1.23
         if: steps.list-changed.outputs.changed == 'true'
 
       - name: Remove node taints

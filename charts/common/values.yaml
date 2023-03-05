@@ -472,6 +472,32 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+metrics:
+  # -- Enable metrics collections with serviceMonitor
+  # @default -- See values.yaml
+  enabled: false
+  serviceMonitor:
+    interval: 3m
+    scrapeTimeout: 1m
+    labels: {}
+  # -- Enable and configure Prometheus Rules for the chart under this key.
+  # @default -- See values.yaml
+  prometheusRule:
+    enabled: false
+    labels: {}
+    # -- Configure additionial rules for the chart under this key.
+    # @default -- See prometheusrules.yaml
+    rules: []
+      # - alert: SonarrDown
+      #   annotations:
+      #     description: Sonarr service is down.
+      #     summary: Sonarr is down.
+      #   expr: |
+      #     sonarr_system_status == 0
+      #   for: 5m
+      #   labels:
+      #     severity: critical
+
 # -- The common chart supports several add-ons. These can be configured under this key.
 # @default -- See below
 addons:
