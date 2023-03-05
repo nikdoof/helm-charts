@@ -512,6 +512,20 @@ entries:
     version: 4.5.2
   common-chart:
   - apiVersion: v2
+    created: "2023-03-05T08:32:24.451273963Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.3
+    description: A simple wrapper chart around the common chart
+    digest: f28ffaf5c2e92612c94dea7c96e1b303e8ae9c24b49b7d7e9142dfb4fbbf5097
+    maintainers:
+    - name: nikdoof
+    name: common-chart
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/common-chart-1.2.3/common-chart-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
     created: "2022-08-22T15:37:04.38088904Z"
     dependencies:
     - name: common
@@ -1511,4 +1525,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-05T08:29:54.610979621Z"
+generated: "2023-03-05T08:32:24.451717164Z"
