@@ -1,0 +1,5 @@
+---
+plex:
+  autodiscover: true
+  token: a0a0a0a0a0
+  loglevel: debug

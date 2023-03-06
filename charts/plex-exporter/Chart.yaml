@@ -1,8 +1,8 @@
 apiVersion: v2
-appVersion: 0.2.2
+appVersion: 0.2.3
 description: A prometheus exporter for Plex Media Server
 name: plex-exporter
-version: 0.1.2
+version: 0.1.3
 kubeVersion: ">=1.16.0-0"
 keywords:
   - plex-exporter
@@ -16,5 +16,4 @@ maintainers:
 dependencies:
   - name: common
     repository: https://nikdoof.github.io/helm-charts/
-    version: 4.5.2
-
+    version: 4.5.3

@@ -14,6 +14,10 @@ args:
   - "--token"
   - "{{ .Values.plex.token }}"
   {{ end }}
+  {{ if .Values.plex.loglevel }}
+  - "--log-level"
+  - "{{ .Values.plex.loglevel }}"
+  {{ end }}
 {{- end -}}
 {{- $_ := mergeOverwrite .Values (include "plex-exporter.harcodedValues" . | fromYaml) -}}
 
