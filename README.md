@@ -22,15 +22,13 @@ You can then run `helm search nikdoof` to see the charts.
 
 See [charts folder](./charts) for a complete list.
 
-* [aaisp2mqtt](./charts/aaisp2mqtt) - A tool to pull information from [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API and output to MQTT.
-* [idrac6](./charts/idrac6) - A VNC/Web UI container to wrap around the outdated Java/KVM solution in Dell iDRAC6, and make it HTML5.
-* [vsphere-influxdb-go](./charts/vsphere-influxdb-go) - A vSphere statistics exporter that outputs to InfluxDB.
-* [zigbee2mqttassistant](./charts/zigbee2mqttassistant) - A WebUI for Zigbee2MQTT.
-* [hg612-exporter](./charts/hg612-exporter) - A Prometheus exporter for HG612 xDSL Modems.
 * [aaisp-exporter](./charts/aaisp-exporter) - A Prometheus exporter for [Andrews & Arnold](https://www.aa.net.uk/) CHAOSv2 API.
+* [antennas](./charts/antennas) - Proxy mapping service for allowing Plex to use TVHeadend.
+* [hg612-exporter](./charts/hg612-exporter) - A Prometheus exporter for HG612 xDSL Modems.
+* [idrac6](./charts/idrac6) - A VNC/Web UI container to wrap around the outdated Java/KVM solution in Dell iDRAC6, and make it HTML5.
+* [mqtt-exporter](./charts/mqtt-exporter) - A generic Prometheus exporter for MQTT data, useful to export Home Assistant state data via MQTT.
 * [plex-exporter](./charts/plex-exporter) - A Prometheus exporter for Plex Media Server.
 * [vmware-exporter](./charts/vmware-exporter) - A Prometheus exporter for VMware vSphere.
-* [mqtt-exporter](./charts/mqtt-exporter) - A generic Prometheus exporter for MQTT data.
 
 ## License
 
