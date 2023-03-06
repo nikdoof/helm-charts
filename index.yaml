@@ -3,6 +3,28 @@ entries:
   aaisp-exporter:
   - apiVersion: v2
     appVersion: 0.2.1
+    created: "2023-03-06T10:46:56.909498665Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.3
+    description: A prometheus exporter for the Andrew & Arnold CHAOS API
+    digest: 52182020d31b53b02ff451ba8477f47c94580d21015ab606db1a1fdc6041ea47
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/aaisp-exporter
+    keywords:
+    - aaisp-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: aaisp-exporter
+    sources:
+    - https://github.com/nikdoof/aaisp-chaos
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/aaisp-exporter-0.2.3/aaisp-exporter-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 0.2.1
     created: "2022-08-29T07:07:42.28698478Z"
     dependencies:
     - name: common
@@ -296,6 +318,31 @@ entries:
   antennas:
   - apiVersion: v2
     appVersion: 4.2.0
+    created: "2023-03-06T10:46:56.996630511Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.3
+    description: Antennas
+    digest: 996e71facb14498bf0d77a6d30638a924bc7c3b47f9370da81d32e4395cec845
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/antennas/
+    keywords:
+    - tvheadend
+    - antennas
+    - iptv
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: antennas
+    sources:
+    - https://github.com/jfarseneau/antennas
+    - https://hub.docker.com/r/thejf/antennas
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/antennas-1.1.4/antennas-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
+    appVersion: 4.2.0
     created: "2022-08-22T15:51:49.323436601Z"
     dependencies:
     - name: common
@@ -582,6 +629,28 @@ entries:
   hg612-exporter:
   - apiVersion: v2
     appVersion: 0.1.2
+    created: "2023-03-06T10:46:57.070392359Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.3
+    description: A prometheus exporter for the HG612 modem
+    digest: 9301e684e8d3b0826abbc648cf61d75813d348caf49c86e80b394f4f59eb58d9
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/hg612-exporter
+    keywords:
+    - hg612-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: hg612-exporter
+    sources:
+    - https://github.com/nikdoof/hg612-exporter
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/hg612-exporter-1.2.3/hg612-exporter-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
+    appVersion: 0.1.2
     created: "2022-08-29T07:07:42.400098307Z"
     dependencies:
     - name: common
@@ -801,6 +870,28 @@ entries:
     - https://github.com/nikdoof/helm-charts/releases/download/hg612-exporter-0.0.1/hg612-exporter-0.0.1.tgz
     version: 0.0.1
   idrac6:
+  - apiVersion: v2
+    appVersion: 0.5.0
+    created: "2023-03-06T10:46:57.16087893Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.3
+    description: iDRAC 6 web interface and VNC proxy
+    digest: 4dd7a64dd9a54e520814f049e3c892be3d34b53639ca69ad5c2669266bf15978
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/idrac6/
+    keywords:
+    - idrac6
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: idrac6
+    sources:
+    - https://github.com/DomiStyle/docker-idrac6
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/idrac6-1.1.2/idrac6-1.1.2.tgz
+    version: 1.1.2
   - apiVersion: v2
     appVersion: 0.5.0
     created: "2022-08-22T15:51:49.595870658Z"
@@ -1238,6 +1329,29 @@ entries:
   vmware-exporter:
   - apiVersion: v2
     appVersion: 0.18.2
+    created: "2023-03-06T10:46:57.25081018Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.3
+    description: A prometheus exporter for vSphere vCenter
+    digest: df9a0dea68376f562a2e6f56843905875e97c7e2c645f358f13eadbf9ecaf07e
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/vmware-exporter
+    keywords:
+    - vmware-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: vmware-exporter
+    sources:
+    - https://github.com/pryorda/vmware_exporter
+    - https://hub.docker.com/r/pryorda/vmware_exporter/tags
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/vmware-exporter-0.2.3/vmware-exporter-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v2
+    appVersion: 0.18.2
     created: "2022-08-29T07:07:42.743665309Z"
     dependencies:
     - name: common
@@ -1548,4 +1662,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-06T09:28:26.63476094Z"
+generated: "2023-03-06T10:46:57.251006487Z"
