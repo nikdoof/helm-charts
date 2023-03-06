@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: 0.18.2
 description: A prometheus exporter for vSphere vCenter
 name: vmware-exporter
-version: 0.2.2
+version: 0.2.3
 kubeVersion: ">=1.16.0-0"
 keywords:
   - vmware-exporter
@@ -16,4 +16,4 @@ maintainers:
 dependencies:
   - name: common
     repository: https://nikdoof.github.io/helm-charts/
-    version: 4.5.2
+    version: 4.5.3
