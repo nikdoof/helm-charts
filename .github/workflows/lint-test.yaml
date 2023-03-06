@@ -2,6 +2,11 @@ name: Lint and Test Charts
 
 on: pull_request
 
+env:
+  K8S_VERSION: 1.22
+  HELM_VERSION: 3.9.2
+  PYTHON_VERSION: 3.11
+
 jobs:
   lint-test:
     runs-on: ubuntu-latest
@@ -14,11 +19,11 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v3
         with:
-          version: v3.6.3
+          version: "v${{ env.HELM_VERSION }}"
 
       - uses: actions/setup-python@v4
         with:
-          python-version: 3.7
+          python-version: "${{ env.PYTHON_VERSION }}"
 
       - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.3.1
@@ -37,12 +42,13 @@ jobs:
       - name: Create k3d cluster
         uses: nolar/setup-k3d-k3s@v1
         with:
-          version: v1.23
+          version: v"${{ env.K8S_VERSION }}"
         if: steps.list-changed.outputs.changed == 'true'
 
       - name: Remove node taints
         run: |
           kubectl taint --all=true nodes node.cloudprovider.kubernetes.io/uninitialized- || true
+        if: steps.list-changed.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
         run: ct install --config .github/ct.yaml
