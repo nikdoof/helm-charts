@@ -1075,6 +1075,29 @@ entries:
     version: 1.2.12
   plex-exporter:
   - apiVersion: v2
+    appVersion: 0.2.3
+    created: "2023-03-06T09:28:26.634642841Z"
+    dependencies:
+    - name: common
+      repository: https://nikdoof.github.io/helm-charts/
+      version: 4.5.3
+    description: A prometheus exporter for Plex Media Server
+    digest: bfdf7f7c0bedf1bd6861f7b0299b105c44896b7643fb3f06196e950eee2efc5a
+    home: https://github.com/nikdoof/helm-charts/tree/master/charts/plex-exporter
+    keywords:
+    - plex-exporter
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: andy@tensixtyone.com
+      name: nikdoof
+    name: plex-exporter
+    sources:
+    - https://github.com/arnarg/plex_exporter
+    - https://hub.docker.com/r/granra/plex_exporter/
+    urls:
+    - https://github.com/nikdoof/helm-charts/releases/download/plex-exporter-0.1.3/plex-exporter-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     appVersion: 0.2.2
     created: "2022-08-29T07:07:42.633114855Z"
     dependencies:
@@ -1525,4 +1548,4 @@ entries:
     urls:
     - https://github.com/nikdoof/helm-charts/releases/download/zigbee2mqttassistant-0.1.0/zigbee2mqttassistant-0.1.0.tgz
     version: 0.1.0
-generated: "2023-03-05T08:32:24.451717164Z"
+generated: "2023-03-06T09:28:26.63476094Z"
