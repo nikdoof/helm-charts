@@ -2,7 +2,7 @@ apiVersion: v2
 appVersion: "0.5.0"
 description: iDRAC 6 web interface and VNC proxy
 name: idrac6
-version: 1.1.1
+version: 1.1.2
 kubeVersion: ">=1.16.0-0"
 keywords:
   - idrac6
@@ -15,4 +15,4 @@ maintainers:
 dependencies:
   - name: common
     repository: https://nikdoof.github.io/helm-charts/
-    version: 4.5.2
+    version: 4.5.3

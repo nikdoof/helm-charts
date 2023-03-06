@@ -54,16 +54,16 @@ metrics:
     labels: {}
     # -- Configure additionial rules for the chart under this key.
     # @default -- See prometheusrules.yaml
-    rules: []
-      # - alert: vmwareExporterAbsent
-      #   annotations:
-      #     description: vmware Exporter has disappeared from Prometheus service discovery.
-      #     summary: vmware Exporter is down.
-      #   expr: |
-      #     absent(up{job=~".*vmwareexporter.*"} == 1)
-      #   for: 5m
-      #   labels:
-      #     severity: critical
+    rules:
+      - alert: VmwareExporterAbsent
+        annotations:
+          description: Vmware Exporter has disappeared from Prometheus service discovery.
+          summary: Vmware Exporter is down.
+        expr: |
+          absent(up{job=~".*{{ include "common.names.fullname" . }}.*"} == 1)
+        for: 5m
+        labels:
+          severity: critical
   # -- Enable and configure Grafana dashboard ConfigMaps for the chart under this key.
   # @default -- See values.yaml
   dashboards:
