@@ -51,6 +51,7 @@ jobs:
       - name: Install CRDs
         run: |
           cat crds/*.yaml | kubectl apply -f -
+        if: steps.list-changed.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
         run: ct install --config .github/ct.yaml
